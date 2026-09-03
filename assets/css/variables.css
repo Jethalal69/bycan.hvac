@@ -1,0 +1,139 @@
+/* ==========================================================================
+   ByCan HVAC Engineering — High-End Design Tokens & Color Architecture
+   Aesthetic: Premium Canadian Mechanical Contractor • Precision Engineering
+   ========================================================================== */
+
+:root {
+  /* --- Midnight Engineering Navy System --- */
+  --color-navy-deepest: #030712;
+  --color-navy-base: #060e1c;
+  --color-navy-surface: #0a172c;
+  --color-navy-card: #0f203c;
+  --color-navy-hover: #152b4f;
+  --color-navy-border: rgba(255, 255, 255, 0.09);
+  --color-navy-border-hover: rgba(255, 255, 255, 0.18);
+  --color-navy-border-glow: rgba(255, 85, 0, 0.4);
+
+  /* --- Brand Safety & Combustion Orange --- */
+  --color-orange-main: #ff5500;
+  --color-orange-vibrant: #ff6b00;
+  --color-orange-hover: #e04b00;
+  --color-orange-active: #cc4300;
+  --color-orange-dark: #b83d00;
+  --color-orange-text-contrast: #ff8c42; /* WCAG AA accessible on dark navy */
+  --color-orange-subtle: rgba(255, 85, 0, 0.08);
+  --color-orange-subtle-hover: rgba(255, 85, 0, 0.14);
+  --color-orange-border: rgba(255, 85, 0, 0.32);
+  --color-orange-glow: rgba(255, 85, 0, 0.28);
+  --color-orange-gradient: linear-gradient(135deg, #ff6600 0%, #ff4500 100%);
+  --color-orange-gradient-hover: linear-gradient(135deg, #ff771a 0%, #ff5500 100%);
+
+  /* --- Steel Refrigeration, Hydronic & Cyan Secondary Accents --- */
+  --color-blue-steel: #0284c7;
+  --color-blue-light: #e0f2fe;
+  --color-blue-subtle: rgba(2, 132, 199, 0.08);
+  --color-blue-border: rgba(2, 132, 199, 0.25);
+  --color-blue-glow: rgba(2, 132, 199, 0.2);
+  --color-cyan-accent: #38bdf8;
+  --color-cyan-subtle: rgba(56, 189, 248, 0.12);
+  --color-cyan-border: rgba(56, 189, 248, 0.35);
+  --color-cyan-glow: rgba(56, 189, 248, 0.25);
+
+  /* --- Status & Trust Accents --- */
+  --color-green-beacon: #22c55e;
+  --color-green-light: #dcfce7;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #20ba5a;
+  --color-whatsapp-active: #1da851;
+  --color-whatsapp-glow: rgba(37, 211, 102, 0.3);
+  --color-red-emergency: #ef4444;
+  --color-red-dark: #dc2626;
+  --color-red-subtle: rgba(239, 68, 68, 0.1);
+  --color-red-border: rgba(239, 68, 68, 0.35);
+  --color-red-glow: rgba(239, 68, 68, 0.3);
+
+  /* --- Light Stone & Editorial Surfaces --- */
+  --bg-light-pure: #ffffff;
+  --bg-light-stone: #f8fafc;
+  --bg-light-elevated: #f1f5f9;
+  --bg-light-subtle: #e2e8f0;
+  
+  --text-on-light-primary: #09121f;
+  --text-on-light-secondary: #27364b;
+  --text-on-light-muted: #596b82;
+  --text-on-light-subtle: #7f91a7;
+  
+  --border-light-subtle: #e2e8f0;
+  --border-light-strong: #cbd5e1;
+
+  /* --- Typography System --- */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+  /* Fluid Typographic Scale */
+  --text-2xs: 0.6875rem; /* 11px */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+  --text-5xl: 3rem;      /* 48px */
+  --text-hero: clamp(2.35rem, 4vw + 1rem, 3.85rem);
+
+  /* --- Spacing System --- */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  --container-max: 1240px;
+  --container-narrow: 920px;
+  --header-height: 76px;
+  --header-height-scrolled: 62px;
+  --utility-height: 36px;
+  --space-section: clamp(3.75rem, 7vw, 6rem);
+
+  /* --- Architectural Geometry & Radii --- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* --- Premium Multi-Layer Shadows --- */
+  --shadow-subtle: 0 1px 2px rgba(9, 18, 31, 0.03), 0 1px 3px rgba(9, 18, 31, 0.05);
+  --shadow-md: 0 2px 4px rgba(9, 18, 31, 0.03), 0 6px 16px -2px rgba(9, 18, 31, 0.07);
+  --shadow-lg: 0 4px 6px -1px rgba(9, 18, 31, 0.04), 0 12px 28px -4px rgba(9, 18, 31, 0.1);
+  --shadow-xl: 0 8px 10px -2px rgba(9, 18, 31, 0.04), 0 24px 48px -12px rgba(9, 18, 31, 0.14);
+  --shadow-orange-glow: 0 4px 20px rgba(255, 85, 0, 0.32);
+  --shadow-dark-card: 0 4px 20px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-dark-elevated: 0 12px 32px -8px rgba(3, 7, 18, 0.5), 0 28px 64px -16px rgba(3, 7, 18, 0.65);
+  --shadow-dark-glow: 0 16px 40px -10px rgba(0, 0, 0, 0.7), 0 0 32px rgba(255, 85, 0, 0.12);
+
+  /* --- Transitions --- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+
+  /* --- Layer Stacking --- */
+  --z-base: 1;
+  --z-dropdown: 50;
+  --z-sticky: 100;
+  --z-drawer: 200;
+  --z-modal: 300;
+}

@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ByCan HVAC Engineering | Boilers, Heat Pumps & Furnaces Toronto</title>
+  <meta name="description" content="ByCan HVAC Engineering delivers master-crafted hydronic boilers, cold-climate heat pumps, and gas furnace repairs across Toronto, Etobicoke, Mississauga, and Brampton.">
+  <link rel="canonical" href="https://bycan.ca/">
+  <link rel="icon" type="image/png" href="assets/images/brand/bycan-logo.png">
+  
+  <!-- Typography: Outfit, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Design System -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Seasonal Promo Notification Banner -->
+  <div class="seasonal-banner" id="seasonalBanner" role="region" aria-label="Seasonal Promotion">
+    <div class="seasonal-content">
+      <span class="seasonal-badge">🔥 Fall/Winter Special</span>
+      <span>Pre-Season Heating & Combustion Safety Tune-Up: <strong>$129</strong> (Includes Electronic Flue Gas Diagnostic)</span>
+      <a href="#requestConsole" class="seasonal-cta">Book Priority Slot &rarr;</a>
+    </div>
+    <button class="seasonal-close" id="seasonalCloseBtn" aria-label="Dismiss banner">&times;</button>
+  </div>
+
+  <!-- Initial Premium Branded Intro / Loading Screen -->
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true" role="status" aria-label="Loading ByCan HVAC Engineering">
+    <div class="preloader-content">
+      <div class="preloader-brand">
+        <div class="preloader-icon">
+          <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+        </div>
+        <div class="preloader-text">
+          <span class="preloader-name">BYCAN</span>
+          <span class="preloader-tagline">HVAC ENGINEERING</span>
+        </div>
+      </div>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-bar" id="preloaderProgressBar"></div>
+      </div>
+      <div class="preloader-micro">
+        <span>PRECISION • PERFORMANCE • COMFORT</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- 1. Top Utility Notification Bar -->
+  <aside class="utility-bar" aria-label="Announcement & Dispatch Info">
+    <div class="container">
+      <div class="utility-left">
+        <span class="status-beacon">
+          <span class="pulse-dot"></span>
+          Emergency Dispatch Active Across GTA
+        </span>
+        <span class="hidden-mobile" style="color: var(--color-navy-border);">|</span>
+        <span class="hidden-mobile">📍 Hub: 1460 The Queensway, Unit 103, Etobicoke, ON M8Z 1S7</span>
+      </div>
+      <div class="utility-right">
+        <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="utility-link">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.524 1.961.815 2.796.815 3.183 0 5.768-2.587 5.769-5.767.001-3.181-2.585-5.767-5.769-5.767zm0-2.172c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8-1.42 0-2.75-.37-3.9-1.02l-4.131 1.082 1.101-4.022c-.73-1.22-1.17-2.63-1.17-4.14 0-4.418 3.582-8 8-8z"/></svg>
+          WhatsApp: <strong>(437) 599-9215</strong>
+        </a>
+        <a href="https://www.instagram.com/hvac.bycan/" target="_blank" rel="noopener noreferrer" class="utility-link">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @hvac.bycan
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Main Navigation Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container">
+      <a href="index.html" class="brand-logo" aria-label="ByCan HVAC Engineering Home">
+        <div class="brand-icon">
+          <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">BYCAN</span>
+          <span class="brand-tagline">HVAC ENGINEERING</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">
+            Services
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="boilers-hydronics.html" class="dropdown-item">🔥 Boilers & Hydronics (Specialty)</a>
+            <a href="heating-furnaces.html" class="dropdown-item">⚡ Gas Furnaces & Safety</a>
+            <a href="cooling-heat-pumps.html" class="dropdown-item">❄️ AC & Heat Pump Systems</a>
+            <a href="services.html" class="dropdown-item">🛡️ Full Service Catalog</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="about.html" class="nav-link">The Engineering Difference</a></div>
+        <div class="nav-item"><a href="#gallery" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="service-areas.html" class="nav-link">Service Areas</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <!-- Header Action Group -->
+      <div class="header-actions">
+        <div class="header-phone-group">
+          <span class="header-phone-sub">Emergency Dispatch</span>
+          <a href="tel:+14375999215" class="header-phone-number">(437) 599-9215</a>
+        </div>
+        <a href="#requestConsole" class="btn btn-primary btn-sm">
+          <span>Request Service</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="brand-logo">
+          <div class="brand-icon">
+            <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">BYCAN</span>
+            <span class="brand-tagline">HVAC ENGINEERING</span>
+          </div>
+        </div>
+        <button id="drawerCloseBtn" style="background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer;">✕</button>
+      </div>
+      <div class="drawer-links">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="services.html" class="drawer-link">All Services</a>
+        <a href="boilers-hydronics.html" class="drawer-link">Boilers & Hydronics</a>
+        <a href="heating-furnaces.html" class="drawer-link">Gas Furnaces</a>
+        <a href="cooling-heat-pumps.html" class="drawer-link">AC & Heat Pumps</a>
+        <a href="service-areas.html" class="drawer-link">Service Areas</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+      <a href="tel:+14375999215" class="btn btn-emergency" style="width: 100%;">Call: (437) 599-9215</a>
+      <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">WhatsApp Direct</a>
+    </div>
+  </div>
+
+  <!-- 3. Asymmetric Split Hero Showcase -->
+  <section class="hero tech-grid-bg" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left: Editorial Typography & 3-Tier Conversion -->
+        <div class="reveal-left">
+          <div class="eyebrow hero-stagger-1">TORONTO MECHANICAL SPECIALISTS</div>
+          <h1 class="hero-title hero-stagger-2">
+            Heating & Cooling, <span>Engineered</span> for the GTA.
+          </h1>
+          <p class="hero-lead hero-stagger-3">
+            Master-grade hydronic boiler systems, nitrogen-purged copper brazing, and emergency heating repairs. We treat your mechanical room as critical home infrastructure—not just an appliance.
+          </p>
+
+          <div class="hero-cta-row hero-stagger-4">
+            <a href="#requestConsole" class="btn btn-primary btn-lg">
+              <span>Request Service</span>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="tel:+14375999215" class="btn btn-emergency btn-lg">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Call (437) 599-9215</span>
+            </a>
+            <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg" aria-label="Chat on WhatsApp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.524 1.961.815 2.796.815 3.183 0 5.768-2.587 5.769-5.767.001-3.181-2.585-5.767-5.769-5.767zm0-2.172c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8-1.42 0-2.75-.37-3.9-1.02l-4.131 1.082 1.101-4.022c-.73-1.22-1.17-2.63-1.17-4.14 0-4.418 3.582-8 8-8z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="hero-meta-strip hero-stagger-5">
+            <span class="meta-pill meta-pill-warranty">🛡️ TSSA Registered Contractor #007684321</span>
+            <span class="meta-pill meta-pill-safety">📍 Hub: 1460 The Queensway, Unit 103</span>
+            <span class="meta-pill meta-pill-emergency">⚡ Direct GTA Dispatch</span>
+            <span class="meta-pill meta-pill-efficiency">🔥 NTI Hydronic Authority</span>
+          </div>
+        </div>
+
+        <!-- Right: Real Mechanical Room Showcase -->
+        <div class="reveal-right">
+          <div class="hero-visual-card hero-stagger-3">
+            <img src="assets/images/gallery/mechanical-room-master.jpg" alt="Master Craftsman Hydronic Boiler Mechanical Room in Toronto Home">
+            <div class="hero-spec-overlay">
+              <div>
+                <div class="spec-title">Dual NTI High-Efficiency Boiler Setup</div>
+                <div class="spec-desc">Polished Copper Headers • Oxygen-Barrier PEX Manifold</div>
+              </div>
+              <div class="spec-tag">98% AFUE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Editorial Brand Story: The Engineering Difference (Magazine Layout) -->
+  <section class="section section-stone" id="difference">
+    <div class="container">
+      <div class="editorial-grid">
+        <!-- Visual Column -->
+        <div class="reveal-left">
+          <div class="editorial-visual-frame">
+            <img src="assets/images/gallery/technician-diagnostic.jpg" alt="ByCan Technician Performing Precision Combustion Diagnostic in Toronto">
+            <div class="editorial-badge">
+              <span>🔬 Scientific Root-Cause Diagnostic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editorial Copy & Proof Column -->
+        <div class="reveal-right">
+          <div class="eyebrow eyebrow-blue">THE BYCAN DIFFERENCE</div>
+          <h2 class="editorial-manifesto">Zero Shortcuts in Mechanical Safety.</h2>
+          <p class="editorial-lead">
+            Most HVAC contractors rush jobs with cheap slip fittings and flame guesswork. At ByCan, we apply strict European hydronic discipline and precision instrumentation to every boiler, furnace, and heat pump installation.
+          </p>
+
+          <!-- Technical Comparative Proof Points -->
+          <div class="proof-stack">
+            <div class="proof-card">
+              <div class="proof-header">
+                <span class="proof-title">1. Nitrogen-Purged Copper Brazing</span>
+                <span class="proof-spec">Zero Carbon Slag</span>
+              </div>
+              <p class="proof-desc">We flow dry nitrogen through refrigeration lines during oxy-acetylene brazing, preventing internal oxidation that burns out compressor expansion valves.</p>
+            </div>
+
+            <div class="proof-card">
+              <div class="proof-header">
+                <span class="proof-title">2. Digital Combustion & Flue Gas Analysis</span>
+                <span class="proof-spec">CO Safety Certified</span>
+              </div>
+              <p class="proof-desc">We test CO, O2, and flue temperatures with electronic analyzers on every furnace service to ensure safe venting and zero carbon monoxide leakage.</p>
+            </div>
+
+            <div class="proof-card">
+              <div class="proof-header">
+                <span class="proof-title">3. Multi-Zone Hydronic Balancing</span>
+                <span class="proof-spec">Equal Thermal Flow</span>
+              </div>
+              <p class="proof-desc">Custom brass manifolds with individual loop flow meters, ensuring radiant floors and cast-iron radiators heat evenly without cold spots.</p>
+            </div>
+
+            <div class="proof-card">
+              <div class="proof-header">
+                <span class="proof-title">4. White-Glove Job Site Protection</span>
+                <span class="proof-spec">Pristine Cleanliness</span>
+              </div>
+              <p class="proof-desc">Protective floor runners, shoe covers, secure cable conduits, and complete vacuuming. We leave mechanical rooms cleaner than we found them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Interactive Service Discovery Experience -->
+  <section class="section section-light" id="services">
+    <div class="container">
+      <div class="section-header text-left reveal-up">
+        <div class="eyebrow">ENGINEERING CAPABILITIES</div>
+        <h2 class="section-title">Heating, Cooling & Hydronic Specializations</h2>
+        <p class="section-desc">Designed specifically for the Greater Toronto Area's extreme winter lows and humid summer highs.</p>
+      </div>
+
+      <!-- Service Filter Tabs -->
+      <div class="service-discovery-tabs reveal">
+        <button class="discovery-tab-btn active" data-category="all">All Specialties</button>
+        <button class="discovery-tab-btn" data-category="boilers">Boilers & Hydronics</button>
+        <button class="discovery-tab-btn" data-category="heating">Gas Furnaces</button>
+        <button class="discovery-tab-btn" data-category="cooling">AC & Heat Pumps</button>
+      </div>
+
+      <!-- Editorial Service Cards -->
+      <div class="editorial-service-list">
+        <!-- Specialty 1: Boilers -->
+        <div class="editorial-service-card" data-category="boilers">
+          <div class="service-card-media">
+            <img src="assets/images/gallery/mechanical-room-master.jpg" alt="NTI Condensing Boilers and Radiant Piping">
+          </div>
+          <div class="service-card-content">
+            <span class="service-pill-tag">CORE ENGINEERING SPECIALTY</span>
+            <h3 class="service-heading">Hydronic Boilers & Radiant Heat</h3>
+            <p class="service-text">
+              High-efficiency NTI condensing boilers, combi-boilers for simultaneous heating and domestic hot water, and custom manifold fabrication for radiant in-floor loops.
+            </p>
+            <div class="service-checklist">
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> NTI & Navien certified setup</div>
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Radiant loop pressure testing</div>
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Circulator pump diagnostic</div>
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Custom brass manifold headers</div>
+            </div>
+            <div>
+              <a href="boilers-hydronics.html" class="btn btn-outline btn-sm">Explore Boiler Solutions &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialty 2: Furnaces -->
+        <div class="editorial-service-card" data-category="heating">
+          <div class="service-card-media">
+            <img src="assets/images/gallery/technician-diagnostic.jpg" alt="Gas Furnace Repair in Toronto">
+          </div>
+          <div class="service-card-content">
+            <span class="service-pill-tag" style="color: var(--color-red-emergency); background-color: var(--color-red-subtle);">EMERGENCY HEATING</span>
+            <h3 class="service-heading">Gas Furnaces & Safety Testing</h3>
+            <p class="service-text">
+              Fast diagnostic for no-heat emergencies across the GTA. We service ECM blower motors, hot surface igniters, gas valves, and perform digital heat exchanger safety inspections.
+            </p>
+            <div class="service-checklist">
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Same-day no-heat triage</div>
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Flue gas combustion analysis</div>
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> OEM replacement parts</div>
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> High-efficiency two-stage units</div>
+            </div>
+            <div>
+              <a href="heating-furnaces.html" class="btn btn-outline btn-sm">Explore Furnace Services &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialty 3: AC & Heat Pumps -->
+        <div class="editorial-service-card" data-category="cooling">
+          <div class="service-card-media">
+            <img src="assets/images/gallery/heatpump-winter.jpg" alt="Cold Climate Heat Pump Outdoor Condenser Unit">
+          </div>
+          <div class="service-card-content">
+            <span class="service-pill-tag" style="color: var(--color-blue-steel); background-color: var(--color-blue-subtle);">HYBRID & REFRIGERATION</span>
+            <h3 class="service-heading">Cold-Climate Heat Pumps & Central AC</h3>
+            <p class="service-text">
+              Central air conditioning repairs, nitrogen pressure leak testing, and cold-climate inverter heat pumps that deliver efficient heating down to -30°C and quiet summer cooling.
+            </p>
+            <div class="service-checklist">
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Cold-climate heat pump retrofits</div>
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Nitrogen-purged copper line brazing</div>
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Elevated snow bracket mounting</div>
+              <div class="service-check-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Enbridge & Ontario Clean Energy Rebate eligible</div>
+            </div>
+            <div>
+              <a href="cooling-heat-pumps.html" class="btn btn-outline btn-sm">Explore Cooling & Heat Pumps &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5b. Transparent Pricing Signals & Flexible Financing -->
+  <section class="section section-stone" id="pricing">
+    <div class="container">
+      <div class="section-header text-center reveal-up">
+        <div class="eyebrow">TRANSPARENT MECHANICAL PRICING</div>
+        <h2 class="section-title">Clear Pricing Signals & Flexible Financing</h2>
+        <p class="section-desc">Upfront starting ranges so you can plan with confidence. Itemized engineering quotes provided before any work begins.</p>
+      </div>
+
+      <div class="grid grid-4 gap-md stagger-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <!-- Tier 1: Triage -->
+        <div class="testimonial-card">
+          <div>
+            <span class="service-pill-tag" style="color: var(--color-orange-main); background: rgba(255,85,0,0.1);">DIAGNOSTIC TRIAGE</span>
+            <div style="margin: 12px 0 4px;">
+              <span style="font-size: var(--text-2xl); font-weight: 800; color: var(--text-on-light-primary);">$129</span>
+              <span style="font-size: var(--text-2xs); color: #64748b;"> / visit</span>
+            </div>
+            <p style="font-size: var(--text-2xs); color: var(--color-orange-main); font-weight: 700; margin-bottom: 12px;">Waived with approved repair</p>
+            <ul class="legal-list" style="padding-left: 16px; margin-bottom: var(--space-md);">
+              <li>Full 21-point safety inspection</li>
+              <li>Digital flue gas combustion test</li>
+              <li>Ignition & safety switch check</li>
+              <li>Same-day GTA triage availability</li>
+            </ul>
+          </div>
+          <a href="tel:+14375999215" class="btn btn-outline btn-sm" style="width: 100%;">Book Diagnostic</a>
+        </div>
+
+        <!-- Tier 2: Furnaces -->
+        <div class="testimonial-card">
+          <div>
+            <span class="service-pill-tag" style="color: var(--color-red-emergency); background: var(--color-red-subtle);">GAS FURNACES</span>
+            <div style="margin: 12px 0 4px;">
+              <span style="font-size: var(--text-2xl); font-weight: 800; color: var(--text-on-light-primary);">$3,450</span>
+              <span style="font-size: var(--text-2xs); color: #64748b;"> starting installed</span>
+            </div>
+            <p style="font-size: var(--text-2xs); color: #64748b; margin-bottom: 12px;">Repairs from $185 • Financing from $49/mo</p>
+            <ul class="legal-list" style="padding-left: 16px; margin-bottom: var(--space-md);">
+              <li>98% AFUE Two-Stage ECM unit</li>
+              <li>Sealed combustion intake/exhaust</li>
+              <li>1-Year Comprehensive Labor Warranty</li>
+              <li>10-Year manufacturer parts warranty</li>
+            </ul>
+          </div>
+          <a href="heating-furnaces.html" class="btn btn-outline btn-sm" style="width: 100%;">Furnace Details</a>
+        </div>
+
+        <!-- Tier 3: Boilers -->
+        <div class="testimonial-card" style="border-color: rgba(255,85,0,0.35); box-shadow: var(--shadow-md);">
+          <div>
+            <span class="service-pill-tag" style="color: var(--color-orange-main); background: var(--color-orange-subtle);">HYDRONIC BOILERS</span>
+            <div style="margin: 12px 0 4px;">
+              <span style="font-size: var(--text-2xl); font-weight: 800; color: var(--text-on-light-primary);">$6,800</span>
+              <span style="font-size: var(--text-2xs); color: #64748b;"> starting installed</span>
+            </div>
+            <p style="font-size: var(--text-2xs); color: var(--color-orange-main); font-weight: 700; margin-bottom: 12px;">Up to $6,500 in Rebates Eligible</p>
+            <ul class="legal-list" style="padding-left: 16px; margin-bottom: var(--space-md);">
+              <li>NTI / Navien high-efficiency wall-hung</li>
+              <li>Primary/Secondary copper manifold</li>
+              <li>Spirovent air & dirt separator</li>
+              <li>Multi-zone radiant balancing</li>
+            </ul>
+          </div>
+          <a href="boilers-hydronics.html" class="btn btn-outline btn-sm" style="width: 100%;">Boiler Details</a>
+        </div>
+
+        <!-- Tier 4: Heat Pumps -->
+        <div class="testimonial-card">
+          <div>
+            <span class="service-pill-tag" style="color: var(--color-blue-steel); background: var(--color-blue-subtle);">HEAT PUMPS & AC</span>
+            <div style="margin: 12px 0 4px;">
+              <span style="font-size: var(--text-2xl); font-weight: 800; color: var(--text-on-light-primary);">$4,200</span>
+              <span style="font-size: var(--text-2xs); color: #64748b;"> starting installed</span>
+            </div>
+            <p style="font-size: var(--text-2xs); color: #64748b; margin-bottom: 12px;">Sub-zero heating down to -30°C</p>
+            <ul class="legal-list" style="padding-left: 16px; margin-bottom: var(--space-md);">
+              <li>Cold-climate inverter variable speed</li>
+              <li>Dry nitrogen line brazing standard</li>
+              <li>Cantilever snow wall brackets</li>
+              <li>Enbridge Clean Energy rebate filing</li>
+            </ul>
+          </div>
+          <a href="cooling-heat-pumps.html" class="btn btn-outline btn-sm" style="width: 100%;">Heat Pump Details</a>
+        </div>
+      </div>
+
+      <!-- Financing Reassurance Callout (Tightly Integrated) -->
+      <div class="warranty-banner reveal" style="margin-top: 16px;">
+        <div class="warranty-item">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span><strong>Flexible Monthly Financing from $69/mo:</strong> 0% interest promotional options available through Home Energy Finance Partners.</span>
+        </div>
+        <div class="warranty-item">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          <span><strong>Free On-Site Estimates:</strong> Detailed mechanical replacement quotes with zero obligation.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Architectural Craftsmanship Portfolio (Asymmetric Masonry) -->
+  <section class="section section-dark tech-grid-bg" id="gallery">
+    <div class="container">
+      <div class="section-header text-left reveal-up">
+        <div class="eyebrow">PROOF OF WORK</div>
+        <h2 class="section-title">The Mechanical Craftsmanship Portfolio</h2>
+        <p class="section-desc">Authentic job site photography showcasing ByCan's mechanical piping, brazing, and equipment setups across the GTA.</p>
+      </div>
+
+      <div class="craft-gallery-grid stagger-grid">
+        <!-- Project 1: Wide Focal -->
+        <div class="gallery-item gallery-item-wide">
+          <img src="assets/images/gallery/mechanical-room-master.jpg" alt="Dual NTI Condensing Boiler Mechanical Room in Etobicoke">
+          <div class="gallery-overlay">
+            <span class="gallery-location-tag">📍 Etobicoke Residence</span>
+            <div class="gallery-item-title">Dual NTI Condensing Boiler Mechanical Room</div>
+            <div class="gallery-item-detail">High-temperature polished copper supply headers, dual expansion tanks, and multi-zone radiant loop balancing.</div>
+          </div>
+        </div>
+
+        <!-- Project 2: Tall Focal Brazing -->
+        <div class="gallery-item gallery-item-tall">
+          <img src="assets/images/gallery/brazing-craft.jpg" alt="Nitrogen Purged Copper Brazing Joint">
+          <div class="gallery-overlay">
+            <span class="gallery-location-tag">🔧 Master Brazing Standard</span>
+            <div class="gallery-item-title">Oxy-Acetylene Line Brazing</div>
+            <div class="gallery-item-detail">Flowing dry nitrogen through copper refrigeration joints to ensure zero internal slag buildup.</div>
+          </div>
+        </div>
+
+        <!-- Project 3: Half Heat Pump -->
+        <div class="gallery-item gallery-item-half">
+          <img src="assets/images/gallery/heatpump-winter.jpg" alt="Cold Climate Heat Pump on Snow Brackets">
+          <div class="gallery-overlay">
+            <span class="gallery-location-tag">📍 Toronto Residence</span>
+            <div class="gallery-item-title">Architectural Heat Pump Installation</div>
+            <div class="gallery-item-detail">Elevated heavy-duty wall bracket mounting with clean slim-duct line covers for severe Canadian winters.</div>
+          </div>
+        </div>
+
+        <!-- Project 4: Half Diagnostic -->
+        <div class="gallery-item gallery-item-half">
+          <img src="assets/images/gallery/technician-diagnostic.jpg" alt="Digital Diagnostic and Flue Gas Testing">
+          <div class="gallery-overlay">
+            <span class="gallery-location-tag">📍 Mississauga Heating Assessment</span>
+            <div class="gallery-item-title">Digital Flue Gas & Manifold Diagnostics</div>
+            <div class="gallery-item-detail">Precision electronic combustion testing to eliminate carbon monoxide hazards and calibrate peak efficiency.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6b. Before & After Mechanical Transformations -->
+  <section class="section section-light" id="beforeAfter">
+    <div class="container">
+      <div class="section-header text-center reveal-up">
+        <div class="eyebrow eyebrow-orange">VISUAL PROOF OF CRAFTSMANSHIP</div>
+        <h2 class="section-title">Before & After: Mechanical Upgrades</h2>
+        <p class="section-desc">See how ByCan transforms cluttered, failing mechanical spaces into clean, high-efficiency engineered assets.</p>
+      </div>
+
+      <div class="before-after-grid stagger-grid">
+        <!-- Case 1: High Park Boiler -->
+        <div class="before-after-card">
+          <div class="before-after-media">
+            <div class="before-half">
+              <span class="ba-badge ba-before-badge">Before</span>
+              <img src="assets/images/gallery/technician-diagnostic.jpg" alt="Aging Cluttered Boiler Before Upgrade" loading="lazy">
+            </div>
+            <div class="before-after-divider"></div>
+            <div class="after-half">
+              <span class="ba-badge ba-after-badge">After</span>
+              <img src="assets/images/gallery/mechanical-room-master.jpg" alt="Dual NTI Condensing Boiler Master Room After" loading="lazy">
+            </div>
+          </div>
+          <div class="before-after-body">
+            <div>
+              <h3 class="before-after-title">High Park Century Home Boiler Retrofit</h3>
+              <p class="before-after-desc">Replaced a leaking 35-year-old cast-iron boiler with dual wall-hung NTI condensing units, polished copper headers, and oxygen-barrier PEX manifold loops.</p>
+            </div>
+            <div class="before-after-tags">
+              <span class="ba-tag">📍 High Park</span>
+              <span class="ba-tag">🔥 98% AFUE</span>
+              <span class="ba-tag">💧 Combi DHW</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 2: Kingsway Furnace -->
+        <div class="before-after-card">
+          <div class="before-after-media">
+            <div class="before-half">
+              <span class="ba-badge ba-before-badge">Before</span>
+              <img src="assets/images/gallery/hero-boiler.jpg" alt="Failing Single Stage Furnace Before" loading="lazy">
+            </div>
+            <div class="before-after-divider"></div>
+            <div class="after-half">
+              <span class="ba-badge ba-after-badge">After</span>
+              <img src="assets/images/gallery/technician-diagnostic.jpg" alt="Two-Stage Variable ECM Furnace After" loading="lazy">
+            </div>
+          </div>
+          <div class="before-after-body">
+            <div>
+              <h3 class="before-after-title">The Kingsway Emergency Furnace Upgrade</h3>
+              <p class="before-after-desc">Upgraded a noisy single-stage furnace with a cracked draft hood to a high-efficiency sealed combustion unit with electronic combustion analysis.</p>
+            </div>
+            <div class="before-after-tags">
+              <span class="ba-tag">📍 The Kingsway</span>
+              <span class="ba-tag">⚡ 2-Stage ECM</span>
+              <span class="ba-tag">🛡️ CO Sealed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 3: Mississauga Heat Pump -->
+        <div class="before-after-card">
+          <div class="before-after-media">
+            <div class="before-half">
+              <span class="ba-badge ba-before-badge">Before</span>
+              <img src="assets/images/gallery/heatpump-winter.jpg" alt="Sinking R-22 AC Unit on Patio Stones Before" loading="lazy">
+            </div>
+            <div class="before-after-divider"></div>
+            <div class="after-half">
+              <span class="ba-badge ba-after-badge">After</span>
+              <img src="assets/images/gallery/heatpump-install.jpg" alt="Cold-Climate Inverter Heat Pump on Snow Brackets After" loading="lazy">
+            </div>
+          </div>
+          <div class="before-after-body">
+            <div>
+              <h3 class="before-after-title">Port Credit Sub-Zero Inverter Heat Pump</h3>
+              <p class="before-after-desc">Replaced an obsolete R-22 AC with a cold-climate heat pump mounted on heavy-duty cantilever wall brackets with nitrogen-purged lines.</p>
+            </div>
+            <div class="before-after-tags">
+              <span class="ba-tag">📍 Port Credit</span>
+              <span class="ba-tag">❄️ Sub-Zero -30°C</span>
+              <span class="ba-tag">💵 Rebate Qualified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6c. Job Site Engineering Video Walkthrough Slot -->
+  <section class="section section-dark tech-grid-bg" id="videoShowcase">
+    <div class="container">
+      <div class="section-header text-left reveal-up">
+        <div class="eyebrow eyebrow-green">JOB SITE VIDEO WALKTHROUGH</div>
+        <h2 class="section-title">Behind the Build: Mechanical Room Engineering</h2>
+        <p class="section-desc">Watch our technicians explain the combustion physics, manifold zoning, and nitrogen brazing protocols that protect your home.</p>
+      </div>
+
+      <div class="video-showcase-box reveal-up">
+        <!-- Video Player Frame Slot (Drop-in Ready for Client) -->
+        <div class="video-frame-wrap" id="videoFrameWrap">
+          <!-- CLIENT VIDEO EMBED SLOT: Replace poster image or drop in <video> / YouTube embed below -->
+          <img src="assets/images/gallery/mechanical-room-master.jpg" alt="Job Site Engineering Video Poster" loading="lazy">
+          <button class="video-play-btn" id="videoPlayTrigger" aria-label="Play Engineering Video Walkthrough">
+            <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+
+        <div class="video-showcase-info">
+          <span class="service-pill-tag" style="color: var(--color-orange-main); background: rgba(255,85,0,0.15);">30-60 SEC MECHANICAL TOUR</span>
+          <h3 style="font-size: var(--text-xl); font-weight: 800; color: #ffffff; margin: 12px 0 8px;">Master Hydronic Walkthrough</h3>
+          <p style="font-size: var(--text-xs); color: #cbd5e1; line-height: 1.65; margin-bottom: var(--space-md);">
+            Step inside a recently commissioned Toronto mechanical room featuring twin NTI boilers, custom copper distribution headers, Spirovent air separation, and multi-zone radiant temperature controls.
+          </p>
+          <div class="flex gap-sm" style="flex-wrap: wrap;">
+            <a href="https://www.instagram.com/hvac.bycan/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Watch Reels on Instagram &rarr;</a>
+            <a href="#requestConsole" class="btn btn-primary btn-sm">Request In-Home Assessment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Guided Technical Request Console (Dark Navy Elevation) -->
+  <section class="section section-booking-frame" id="requestConsole">
+    <div class="container container-console">
+      <div class="section-header text-center reveal-up">
+        <div class="eyebrow eyebrow-green">FAST TECHNICAL INTAKE</div>
+        <h2 class="section-title">Request Service or Book an Estimate</h2>
+        <p class="section-desc">Select your system and diagnostic needs below. We will confirm dispatch and contact you promptly.</p>
+      </div>
+
+      <div class="request-console reveal-scale">
+        <div class="text-center">
+          <div class="console-header-badge">
+            <span class="console-live-dot"></span>
+            Direct Technical Intake • Ontario Licensed
+          </div>
+        </div>
+
+        <!-- 4-Step Connecting Progress Indicator -->
+        <div class="console-progress-track" aria-label="Booking Progress">
+          <div class="console-progress-rail"></div>
+          <div class="console-progress-fill" id="consoleProgressLine" style="width: 0%;"></div>
+
+          <div class="console-step-item active" data-step="1">
+            <div class="console-step-circle">
+              <span class="step-num">1</span>
+              <span class="step-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            </div>
+            <span class="console-step-label">System</span>
+          </div>
+
+          <div class="console-step-item" data-step="2">
+            <div class="console-step-circle">
+              <span class="step-num">2</span>
+              <span class="step-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            </div>
+            <span class="console-step-label">Problem</span>
+          </div>
+
+          <div class="console-step-item" data-step="3">
+            <div class="console-step-circle">
+              <span class="step-num">3</span>
+              <span class="step-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            </div>
+            <span class="console-step-label">Location</span>
+          </div>
+
+          <div class="console-step-item" data-step="4">
+            <div class="console-step-circle">
+              <span class="step-num">4</span>
+              <span class="step-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            </div>
+            <span class="console-step-label">Contact</span>
+          </div>
+        </div>
+
+        <!-- Inline Validation Alert -->
+        <div class="console-validation-msg" id="consoleValidationMsg" role="alert" style="display: none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span id="consoleValidationText">Please select an option to continue.</span>
+        </div>
+
+        <!-- Step 1: Equipment Selection -->
+        <div class="console-pane active" id="consolePane1" role="region" aria-labelledby="pane1Heading">
+          <h3 class="console-pane-heading" id="pane1Heading">Step 1: Select Your System</h3>
+          <p class="console-pane-desc">What equipment requires engineering attention?</p>
+
+          <div class="chip-grid" role="radiogroup" aria-label="Select Your System">
+            <div class="selection-chip selected" data-field="equipment" data-value="Hydronic Boiler" role="radio" aria-checked="true" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">Hydronic Boiler</div>
+                <div class="chip-sub">NTI, radiant in-floor, combi</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+
+            <div class="selection-chip" data-field="equipment" data-value="Gas Furnace" role="radio" aria-checked="false" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">Gas Furnace</div>
+                <div class="chip-sub">Forced air heating system</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+
+            <div class="selection-chip" data-field="equipment" data-value="AC or Heat Pump" role="radio" aria-checked="false" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><line x1="2" y1="12" x2="22" y2="12"/><path d="m4.93 4.93 4.24 4.24M14.83 14.83l4.24 4.24M19.07 4.93l-4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">AC or Heat Pump</div>
+                <div class="chip-sub">Central cooling & inverter units</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+
+            <div class="selection-chip" data-field="equipment" data-value="Tankless Water Heater" role="radio" aria-checked="false" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 12a3 3 0 0 0 3-3c0-.8-.4-1.5-1-2"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">Tankless Water Heater</div>
+                <div class="chip-sub">Navien, Rinnai on-demand</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Diagnostic Symptom -->
+        <div class="console-pane" id="consolePane2" role="region" aria-labelledby="pane2Heading">
+          <h3 class="console-pane-heading" id="pane2Heading">Step 2: What Is Happening?</h3>
+          <p class="console-pane-desc">Describe the primary issue with your system.</p>
+
+          <div class="chip-grid" role="radiogroup" aria-label="What Is Happening">
+            <div class="selection-chip selected" data-field="issue" data-value="No Heat / Cold Air" role="radio" aria-checked="true" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">No Heat / Cold Air</div>
+                <div class="chip-sub">Emergency breakdown</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+
+            <div class="selection-chip" data-field="issue" data-value="Leak / Pressure Drop" role="radio" aria-checked="false" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M9 13a3 3 0 0 0 6 0"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">Leak / Pressure Drop</div>
+                <div class="chip-sub">Boiler or piping water leak</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+
+            <div class="selection-chip" data-field="issue" data-value="Noise / Vibration" role="radio" aria-checked="false" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">Noise / Vibration</div>
+                <div class="chip-sub">Blower motor or pump noise</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+
+            <div class="selection-chip" data-field="issue" data-value="New System Quote" role="radio" aria-checked="false" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">New System Quote</div>
+                <div class="chip-sub">Replacement & rebate estimate</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Location / Property -->
+        <div class="console-pane" id="consolePane3" role="region" aria-labelledby="pane3Heading">
+          <h3 class="console-pane-heading" id="pane3Heading">Step 3: Location & Property</h3>
+          <p class="console-pane-desc">Confirm your Greater Toronto Area municipality.</p>
+
+          <div class="chip-grid" role="radiogroup" aria-label="Location and Property">
+            <div class="selection-chip selected" data-field="municipality" data-value="Etobicoke Hub" role="radio" aria-checked="true" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><polygon points="12 7 13.09 9.26 15.58 9.63 13.79 11.37 14.21 13.85 12 12.69 9.79 13.85 10.21 11.37 8.42 9.63 10.91 9.26 12 7"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">Etobicoke Hub</div>
+                <div class="chip-sub">Queensway, Kingsway, Mimico</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+
+            <div class="selection-chip" data-field="municipality" data-value="Toronto & Midtown" role="radio" aria-checked="false" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">Toronto & Midtown</div>
+                <div class="chip-sub">Downtown, North York, York</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+
+            <div class="selection-chip" data-field="municipality" data-value="Mississauga" role="radio" aria-checked="false" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">Mississauga</div>
+                <div class="chip-sub">Port Credit, Streetsville, Meadowvale</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+
+            <div class="selection-chip" data-field="municipality" data-value="Brampton Corridor" role="radio" aria-checked="false" tabindex="0">
+              <div class="chip-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="chip-content">
+                <div class="chip-label">Brampton Corridor</div>
+                <div class="chip-sub">401/427 accessible areas</div>
+              </div>
+              <div class="chip-check-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Contact & Dispatch Handoff -->
+        <div class="console-pane" id="consolePane4" role="region" aria-labelledby="pane4Heading">
+          <h3 class="console-pane-heading" id="pane4Heading">Step 4: Contact Details</h3>
+          <p class="console-pane-desc">We will review your diagnostic requirements and contact you promptly.</p>
+
+          <div style="margin-top: var(--space-md);">
+            <div class="console-form-group">
+              <label class="console-label" for="consoleName">
+                <span>Full Name</span>
+                <span class="console-label-req">REQUIRED</span>
+              </label>
+              <div class="console-input-wrapper">
+                <span class="console-input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                <input type="text" id="consoleName" class="console-input console-input-with-icon" placeholder="Homeowner / Property Contact" autocomplete="name">
+              </div>
+            </div>
+
+            <div class="console-form-group">
+              <label class="console-label" for="consolePhone">
+                <span>Phone Number</span>
+                <span class="console-label-req">REQUIRED</span>
+              </label>
+              <div class="console-input-wrapper">
+                <span class="console-input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <input type="tel" id="consolePhone" class="console-input console-input-with-icon" placeholder="(437) 599-9215" autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="console-form-group">
+              <label class="console-label" for="consoleNotes">
+                <span>Equipment Brand / Notes</span>
+                <span style="color: #64748b; font-size: var(--text-2xs);">OPTIONAL</span>
+              </label>
+              <textarea id="consoleNotes" class="console-textarea" rows="2" placeholder="e.g. NTI Trinity boiler error code, furnace age, or preferred time..."></textarea>
+            </div>
+
+            <!-- Dynamic Intake Specification Summary Panel -->
+            <div id="consoleSummaryBox"></div>
+          </div>
+        </div>
+
+        <!-- Console Action Controls -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: var(--space-xl); padding-top: var(--space-md); border-top: 1px solid var(--color-navy-border);">
+          <button id="consolePrevBtn" class="btn btn-secondary btn-sm" style="display: none;">&larr; Previous</button>
+          <div style="display: flex; gap: var(--space-sm); margin-left: auto;">
+            <button id="consoleNextBtn" class="btn btn-primary">Next Step &rarr;</button>
+            <button id="consoleWhatsAppBtn" class="btn btn-whatsapp" style="display: none;">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.524 1.961.815 2.796.815 3.183 0 5.768-2.587 5.769-5.767.001-3.181-2.585-5.767-5.769-5.767zm0-2.172c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8-1.42 0-2.75-.37-3.9-1.02l-4.131 1.082 1.101-4.022c-.73-1.22-1.17-2.63-1.17-4.14 0-4.418 3.582-8 8-8z"/></svg>
+              <span>WhatsApp Request</span>
+            </button>
+            <button id="consoleSubmitBtn" class="btn btn-primary" style="display: none;">Submit Request</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. GTA Service Corridor Section -->
+  <section class="section section-light" id="serviceAreas">
+    <div class="container">
+      <div class="section-header text-left reveal-up">
+        <div class="eyebrow">LOCAL GTA COVERAGE</div>
+        <h2 class="section-title">Serving Communities Across the GTA</h2>
+        <p class="section-desc">Headquartered at 1460 The Queensway in Etobicoke with rapid direct highway access.</p>
+      </div>
+
+      <div class="corridor-grid stagger-grid">
+        <div class="corridor-card">
+          <div class="corridor-badge">Headquarters Hub</div>
+          <h3 class="corridor-title">Etobicoke & West Toronto</h3>
+          <p class="corridor-routes">Mimico, The Queensway, The Kingsway, Islington Village, Long Branch, Alderwood, and Richview.</p>
+        </div>
+
+        <div class="corridor-card">
+          <div class="corridor-badge">Metro Corridor</div>
+          <h3 class="corridor-title">City of Toronto & Midtown</h3>
+          <p class="corridor-routes">Bloor West, High Park, Downtown, Yorkville, Annex, North York, York Mills, and Leaside.</p>
+        </div>
+
+        <div class="corridor-card">
+          <div class="corridor-badge">Peel Region Hub</div>
+          <h3 class="corridor-title">Mississauga</h3>
+          <p class="corridor-routes">Port Credit, Lakeview, Streetsville, Meadowvale, Erin Mills, Cooksville, and Applewood.</p>
+        </div>
+
+        <div class="corridor-card">
+          <div class="corridor-badge">Highway Corridor</div>
+          <h3 class="corridor-title">Brampton & Surrounds</h3>
+          <p class="corridor-routes">Serving Bramalea, Heart Lake, Mount Pleasant, Castlemore, and surrounding Halton & Peel Region corridors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8b. Recent Mechanical Projects & Field Dispatch Log -->
+  <section class="section section-dark tech-grid-bg" id="recentProjects">
+    <div class="container">
+      <div class="section-header text-left reveal-up">
+        <div class="eyebrow eyebrow-orange">LIVE FIELD LOG</div>
+        <h2 class="section-title">Recent GTA Mechanical Projects</h2>
+        <p class="section-desc">Real installations completed by ByCan technicians across Toronto, Etobicoke, and Mississauga.</p>
+      </div>
+
+      <div class="projects-log-grid stagger-grid">
+        <div class="project-log-card">
+          <img src="assets/images/gallery/mechanical-room-master.jpg" alt="Dual NTI Boiler Installation in Etobicoke" class="project-log-img" loading="lazy">
+          <div class="project-log-content">
+            <div>
+              <span class="project-log-date">COMMISSIONED • FALL 2026</span>
+              <h3 class="project-log-title">Dual NTI Boiler System & Radiant Zoning</h3>
+              <p class="project-log-excerpt">High-efficiency primary/secondary loop retrofit in an Etobicoke home with polished copper headers and Spirovent air separation.</p>
+            </div>
+            <span class="ba-tag">📍 Etobicoke • The Kingsway</span>
+          </div>
+        </div>
+
+        <div class="project-log-card">
+          <img src="assets/images/gallery/heatpump-install.jpg" alt="Cold Climate Heat Pump in Mississauga" class="project-log-img" loading="lazy">
+          <div class="project-log-content">
+            <div>
+              <span class="project-log-date">COMMISSIONED • FALL 2026</span>
+              <h3 class="project-log-title">Sub-Zero Inverter Heat Pump Conversion</h3>
+              <p class="project-log-excerpt">Converted an aging central AC to a cold-climate inverter heat pump with cantilever snow mounting and $6,500 Enbridge rebate filing.</p>
+            </div>
+            <span class="ba-tag">📍 Mississauga • Port Credit</span>
+          </div>
+        </div>
+
+        <div class="project-log-card">
+          <img src="assets/images/gallery/brazing-craft.jpg" alt="Nitrogen Line Brazing in High Park" class="project-log-img" loading="lazy">
+          <div class="project-log-content">
+            <div>
+              <span class="project-log-date">COMMISSIONED • FALL 2026</span>
+              <h3 class="project-log-title">Master Nitrogen-Purged Copper Line Set</h3>
+              <p class="project-log-excerpt">High Park multi-zone heat pump refrigeration lines flowed with dry nitrogen during torch brazing for zero internal carbon contamination.</p>
+            </div>
+            <span class="ba-tag">📍 Toronto • High Park</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Social Proof & Verified Instagram Integration -->
+  <section class="section section-stone">
+    <div class="container">
+      <div class="section-header text-center reveal-up">
+        <div class="eyebrow">REAL WORK & COMMUNITY</div>
+        <h2 class="section-title">Follow Our Daily Mechanical Projects</h2>
+        <p class="section-desc">See real boiler retrofits, copper brazing joints, and job site videos on Instagram <a href="https://www.instagram.com/hvac.bycan/" target="_blank" rel="noopener noreferrer" style="color: var(--color-orange-main); font-weight: 700;">@hvac.bycan</a></p>
+      </div>
+
+      <div class="instagram-strip stagger-grid">
+        <a href="https://www.instagram.com/hvac.bycan/" target="_blank" rel="noopener noreferrer" class="instagram-card">
+          <img src="assets/images/gallery/mechanical-room-master.jpg" alt="ByCan HVAC Instagram Post Boiler Room" loading="lazy">
+          <div class="instagram-overlay"><span>View on Instagram &rarr;</span></div>
+        </a>
+        <a href="https://www.instagram.com/hvac.bycan/" target="_blank" rel="noopener noreferrer" class="instagram-card">
+          <img src="assets/images/gallery/brazing-craft.jpg" alt="ByCan HVAC Instagram Post Brazing" loading="lazy">
+          <div class="instagram-overlay"><span>View on Instagram &rarr;</span></div>
+        </a>
+        <a href="https://www.instagram.com/hvac.bycan/" target="_blank" rel="noopener noreferrer" class="instagram-card">
+          <img src="assets/images/gallery/heatpump-install.jpg" alt="ByCan HVAC Instagram Post Heat Pump Installation" loading="lazy">
+          <div class="instagram-overlay"><span>View on Instagram &rarr;</span></div>
+        </a>
+        <!-- Intentional Instagram CTA Card -->
+        <a href="https://www.instagram.com/hvac.bycan/" target="_blank" rel="noopener noreferrer" class="instagram-card instagram-cta-card">
+          <div class="instagram-cta-content">
+            <div class="instagram-icon-wrap">
+              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <span class="instagram-cta-handle">@hvac.bycan</span>
+            <span class="instagram-cta-sub">Daily Job Site Stories & Diagnostics</span>
+            <span class="btn btn-primary btn-sm" style="margin-top: 6px; width: 100%;">Follow on Instagram &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9b. Verified Customer Reviews & Testimonials -->
+  <section class="section section-light" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center reveal-up">
+        <div class="eyebrow eyebrow-green">VERIFIED CLIENT REVIEWS</div>
+        <h2 class="section-title">Trusted by GTA Homeowners & Property Managers</h2>
+        <p class="section-desc">Real feedback from clients who demand precision hydronic balancing, rapid emergency triage, and certified mechanical engineering.</p>
+      </div>
+
+      <div class="testimonials-grid stagger-grid">
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"ByCan diagnosed our NTI boiler cycling and pressure drop issue within 45 minutes after two other contractors pushed a $12k replacement. True engineering mindset and honest pricing."</p>
+          </div>
+          <div class="testimonial-author">
+            <span class="author-name">Marcus V.</span>
+            <span class="author-location">📍 The Kingsway, Etobicoke</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"The nitrogen-purged copper brazing and clean line cover finishing on our cold-climate heat pump was absolute art. Mechanical room looks cleaner than when they started."</p>
+          </div>
+          <div class="testimonial-author">
+            <span class="author-name">David L.</span>
+            <span class="author-location">📍 High Park, Toronto</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Emergency furnace repair at 9 PM on a -18°C night. Technician arrived in 40 minutes with the exact OEM hot surface igniter. Heating restored before midnight."</p>
+          </div>
+          <div class="testimonial-author">
+            <span class="author-name">Elena R.</span>
+            <span class="author-location">📍 Port Credit, Mississauga</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Engineered radiant manifold balance across three floors in our home. Cold spots in the north wing completely disappeared. Highly recommended for hydronics."</p>
+          </div>
+          <div class="testimonial-author">
+            <span class="author-name">Arthur K.</span>
+            <span class="author-location">📍 York Mills, North York</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- See All Google Reviews CTA -->
+      <div class="text-center reveal-up" style="margin-top: var(--space-xl);">
+        <a href="https://maps.google.com/?q=ByCan+HVAC+Engineering+1460+The+Queensway+Etobicoke+ON" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+          </svg>
+          <span>See all 5.0★ reviews on Google &rarr;</span>
+        </a>
+      </div>
+
+      <div class="warranty-banner reveal" style="margin-top: 24px;">
+        <div class="warranty-item">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><strong>1-Year Comprehensive Labor Warranty</strong> on All Complete Installations</span>
+        </div>
+        <div class="warranty-item">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          <span><strong>TSSA Registered Contractor #007684321</strong> • Licensed Mechanical Standards</span>
+        </div>
+        <div class="warranty-item">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span><strong>Enbridge Rebate Eligible</strong> Heating & Cooling Systems</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9c. Frequently Asked Questions -->
+  <section class="section section-stone" id="faq">
+    <div class="container container-narrow">
+      <div class="section-header text-center reveal-up">
+        <div class="eyebrow">COMMON QUESTIONS</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Clear answers on emergency dispatch times, labor warranties, licensing, and Ontario heat pump rebates.</p>
+      </div>
+
+      <div class="faq-accordion reveal-up">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>How fast is your emergency dispatch for no-heat or no-cooling situations?</span>
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <p>Our emergency response team is staged directly from our Etobicoke hub at 1460 The Queensway with rapid highway access. For urgent no-heat breakdowns during winter lows, we aim for priority dispatch in under 2 hours across Toronto, Etobicoke, Mississauga, and Brampton.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What warranty coverage is included with new installations?</span>
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <p>Every complete mechanical installation by ByCan HVAC Engineering includes our 1-Year Comprehensive Labor Warranty at zero additional cost. If any installation-related issue occurs within 365 days, we rectify it promptly without labor charges. Major equipment parts are additionally protected by manufacturer warranties (up to 10 years on registered compressors, heat exchangers, and boiler heat cells).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are ByCan technicians TSSA certified and insured?</span>
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. ByCan HVAC Engineering is a fully registered heating and cooling contractor with the Technical Standards and Safety Authority (TSSA Registration #007684321). Our field technicians hold Ontario G1/G2 Gas Fitter licenses and 313A Refrigeration Mechanic certificates, backed by full commercial general liability insurance and WSIB coverage.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do Ontario heat pump and boiler rebates work?</span>
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <p>Qualifying cold-climate inverter heat pumps and high-efficiency hybrid systems are eligible for substantial incentives through Enbridge and Ontario clean energy programs. We assist homeowners with AHRI certification documentation, pre/post energy audits, and complete rebate submission guidance.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What municipalities are included in your standard service corridors?</span>
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <p>We provide full service coverage across Etobicoke (The Kingsway, Mimico, Queensway), City of Toronto & Midtown (High Park, Downtown, North York, Leaside), Peel Region (Mississauga, Port Credit, Streetsville), and Brampton. We also service Oakville, Burlington, and Halton Region corridors upon request.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. 3-Tier Conversion Hub (Emergency Hotline, WhatsApp & Consultation) -->
+  <section class="section section-dark tech-grid-bg" id="contactHub">
+    <div class="container">
+      <div class="section-header text-left reveal-up">
+        <div class="eyebrow eyebrow-green">CONNECT WITH A TECHNICIAN</div>
+        <h2 class="section-title">Ready For Service? Choose Your Preferred Path</h2>
+        <p class="section-desc">Whether you have a midnight no-heat emergency or are planning a high-efficiency boiler upgrade.</p>
+      </div>
+
+      <div class="triage-hub stagger-grid">
+        <!-- Path 1: Emergency -->
+        <div class="triage-card triage-card-emergency">
+          <div>
+            <div class="triage-eyebrow" style="color: var(--color-red-emergency);">🚨 PATH 1: EMERGENCY DISPATCH</div>
+            <h3 class="triage-title">Immediate No-Heat / No-Cool Breakdown</h3>
+            <p class="triage-desc">Direct priority line to our on-call technician for urgent furnace and boiler triage across the GTA.</p>
+          </div>
+          <div>
+            <a href="tel:+14375999215" class="btn btn-emergency" style="width: 100%;">
+              📞 Call: (437) 599-9215
+            </a>
+          </div>
+        </div>
+
+        <!-- Path 2: WhatsApp -->
+        <div class="triage-card triage-card-whatsapp">
+          <div>
+            <div class="triage-eyebrow" style="color: var(--color-whatsapp);">💬 PATH 2: WHATSAPP DIRECT</div>
+            <h3 class="triage-title">Quick Questions & Photo Diagnostics</h3>
+            <p class="triage-desc">Send photos of your boiler error code, furnace model tag, or mechanical room for direct advice.</p>
+          </div>
+          <div>
+            <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+              Chat on WhatsApp Direct
+            </a>
+          </div>
+        </div>
+
+        <!-- Path 3: Planned Quote -->
+        <div class="triage-card triage-card-quote">
+          <div>
+            <div class="triage-eyebrow" style="color: var(--color-orange-main);">📋 PATH 3: PLANNED ESTIMATE</div>
+            <h3 class="triage-title">Boiler or Heat Pump Upgrade Quote</h3>
+            <p class="triage-desc">Request an in-home assessment and receive an itemized mechanical engineering proposal.</p>
+          </div>
+          <div>
+            <a href="#requestConsole" class="btn btn-primary" style="width: 100%;">
+              Launch Guided Intake
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div>
+          <div class="brand-logo" style="margin-bottom: var(--space-md);">
+            <div class="brand-icon">
+              <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">BYCAN</span>
+              <span class="brand-tagline">HVAC ENGINEERING</span>
+            </div>
+          </div>
+          <p style="font-size: var(--text-xs); color: #94a3b8; margin-bottom: var(--space-md); line-height: 1.6;">
+            TSSA Registered Heating & Cooling Contractor #007684321. Hydronic boilers, gas furnaces, and cold-climate heat pumps across Toronto, Etobicoke, Mississauga, and Brampton.
+          </p>
+          <div class="flex gap-sm">
+            <a href="https://www.instagram.com/hvac.bycan/" target="_blank" rel="noopener noreferrer" style="color: var(--color-orange-main); font-weight: 700; font-size: var(--text-xs);">Instagram: @hvac.bycan &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="footer-col-title">Specialties</h4>
+          <div class="footer-links">
+            <a href="boilers-hydronics.html">Hydronic Boilers & Radiant</a>
+            <a href="heating-furnaces.html">Gas Furnace Repairs</a>
+            <a href="cooling-heat-pumps.html">Inverter Heat Pumps</a>
+            <a href="services.html">All HVAC Services</a>
+          </div>
+        </div>
+
+        <!-- Areas -->
+        <div>
+          <h4 class="footer-col-title">Service Areas</h4>
+          <div class="footer-links">
+            <a href="service-areas.html">Etobicoke (Headquarters Hub)</a>
+            <a href="service-areas.html">City of Toronto & Midtown</a>
+            <a href="service-areas.html">Mississauga & Peel Region</a>
+            <a href="service-areas.html">Brampton Corridor</a>
+          </div>
+        </div>
+
+        <!-- Contact & Hub -->
+        <div>
+          <h4 class="footer-col-title">Etobicoke Hub</h4>
+          <div class="footer-contact-list">
+            <div class="contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>1460 The Queensway, Unit 103<br>Etobicoke, ON M8Z 1S7</span>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Phone / WhatsApp: <a href="tel:+14375999215" style="color: #ffffff; font-weight: 700;">(437) 599-9215</a></span>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Email: <a href="mailto:info@bycan.ca" style="color: #ffffff;">info@bycan.ca</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 ByCan HVAC Engineering. All rights reserved. TSSA Registered Contractor #007684321 • Licensed, Bonded & Insured.
+        </div>
+        <div style="display: flex; gap: var(--space-md);">
+          <a href="privacy-policy.html" style="color: #94a3b8; text-decoration: underline;">Privacy Policy</a>
+          <a href="terms-of-service.html" style="color: #94a3b8; text-decoration: underline;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Mobile Sticky Action Dock -->
+  <div class="mobile-action-dock">
+    <div class="dock-grid">
+      <a href="tel:+14375999215" class="dock-item dock-call">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Call (437) 599-9215</span>
+      </a>
+      <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="dock-item dock-whatsapp">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.524 1.961.815 2.796.815 3.183 0 5.768-2.587 5.769-5.767.001-3.181-2.585-5.767-5.769-5.767zm0-2.172c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8-1.42 0-2.75-.37-3.9-1.02l-4.131 1.082 1.101-4.022c-.73-1.22-1.17-2.63-1.17-4.14 0-4.418 3.582-8 8-8z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <a href="#requestConsole" class="dock-item dock-quote">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m-6 9 2 2 4-4"/></svg>
+        <span>Request Service</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Custom Premium Confirmation Modal Dialog -->
+  <div class="console-modal-overlay" id="consoleConfirmModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="console-modal-card" id="consoleModalCard">
+      <button class="console-modal-close" id="modalCloseBtn" aria-label="Close confirmation dialog">&times;</button>
+      
+      <div class="modal-success-badge">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+
+      <h3 class="modal-heading" id="modalHeading">Request Received</h3>
+      <p class="modal-subtext">Thank you, <strong id="modalCustomerName" style="color: #ffffff;">Customer</strong>.</p>
+      
+      <p class="modal-desc">
+        Your service request for <strong id="modalSystemName" style="color: var(--color-orange-vibrant);">Hydronic Boiler</strong> has been received successfully. Our engineering team will review your requirements and contact you using the details provided.
+      </p>
+
+      <div class="modal-summary-panel">
+        <div class="modal-summary-header">
+          <span>REQUEST SUMMARY</span>
+        </div>
+        <div class="modal-summary-grid">
+          <div class="modal-summary-item">
+            <span class="modal-label">SYSTEM</span>
+            <span class="modal-val" id="modalValSystem">Hydronic Boiler</span>
+          </div>
+          <div class="modal-summary-item">
+            <span class="modal-label">ISSUE</span>
+            <span class="modal-val" id="modalValIssue">No Heat / Cold Air</span>
+          </div>
+          <div class="modal-summary-item">
+            <span class="modal-label">SERVICE AREA</span>
+            <span class="modal-val" id="modalValArea">Etobicoke Hub</span>
+          </div>
+          <div class="modal-summary-item">
+            <span class="modal-label">CONTACT PHONE</span>
+            <span class="modal-val" id="modalValPhone">(437) 599-9215</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-primary btn-modal-done" id="modalDoneBtn">
+          <span>Done</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/schema-ld.js"></script>
+</body>
+</html>

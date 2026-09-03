@@ -1,0 +1,12 @@
+{
+  "name": "hvac-website",
+  "version": "1.0.0",
+  "description": "HVAC Service Website",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}

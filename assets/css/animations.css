@@ -1,0 +1,432 @@
+/* ==========================================================================
+   ByCan HVAC Engineering — Dynamic Scroll Animations & HVAC Airflow Interactions
+   Aesthetic: Precision Mechanical Engineering • Controlled Airflow • Blueprint
+   ========================================================================== */
+
+/* --- 1. Top Scroll Progress Indicator --- */
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: calc(var(--z-sticky) + 20);
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff5500 0%, #ff8533 50%, #0284c7 100%);
+  box-shadow: 0 0 10px rgba(255, 85, 0, 0.7);
+  transition: width 0.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* --- 2. Subtle Laminar Airflow & Blueprint Line Animations --- */
+.tech-grid-bg {
+  position: relative;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Engineered Airflow Stream Atmosphere (selective dark sections) */
+.hero.tech-grid-bg::before,
+.section-dark.tech-grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(2, 132, 199, 0.035) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 85% 70%, rgba(255, 85, 0, 0.035) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero > .container,
+.section-dark > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- 3. Scroll Reveal Transitions --- */
+.reveal,
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.reveal-clip {
+  opacity: 0;
+  will-change: transform, opacity, clip-path;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              clip-path 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal,
+.reveal-up {
+  transform: translateY(28px);
+}
+
+.reveal-left {
+  transform: translateX(-32px);
+}
+
+.reveal-right {
+  transform: translateX(32px);
+}
+
+.reveal-scale {
+  transform: scale(0.96) translateY(16px);
+}
+
+.reveal-clip {
+  clip-path: inset(0 0 16% 0);
+  transform: translateY(20px);
+}
+
+/* Active Class Added on Scroll Intersection */
+.revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+  clip-path: inset(0 0 0 0) !important;
+}
+
+/* --- 4. Staggered Cascades for Grids & Lists --- */
+.stagger-grid > * {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: transform, opacity;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stagger-grid.revealed > *:nth-child(1) { transition-delay: 0.04s; opacity: 1; transform: translateY(0); }
+.stagger-grid.revealed > *:nth-child(2) { transition-delay: 0.12s; opacity: 1; transform: translateY(0); }
+.stagger-grid.revealed > *:nth-child(3) { transition-delay: 0.20s; opacity: 1; transform: translateY(0); }
+.stagger-grid.revealed > *:nth-child(4) { transition-delay: 0.28s; opacity: 1; transform: translateY(0); }
+.stagger-grid.revealed > *:nth-child(5) { transition-delay: 0.36s; opacity: 1; transform: translateY(0); }
+.stagger-grid.revealed > *:nth-child(6) { transition-delay: 0.44s; opacity: 1; transform: translateY(0); }
+
+/* --- 5. Hero Section Stagger Sequence --- */
+.hero-stagger-1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
+}
+
+.hero-stagger-2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+}
+
+.hero-stagger-3 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+}
+
+.hero-stagger-4 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
+}
+
+.hero-stagger-5 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s;
+}
+
+.site-ready .hero-stagger-1,
+.site-ready .hero-stagger-2,
+.site-ready .hero-stagger-3,
+.site-ready .hero-stagger-4,
+.site-ready .hero-stagger-5 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- 6. Micro-Interactions & Hover Elevations --- */
+
+/* Hero Visual Card Hover & Overlay Motion */
+.hero-visual-card {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+}
+
+.hero-visual-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 60px -12px rgba(3, 7, 18, 0.8), 0 0 28px rgba(255, 85, 0, 0.14);
+}
+
+.hero-spec-overlay {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+.hero-visual-card:hover .hero-spec-overlay {
+  transform: translateY(-2px);
+  background: rgba(6, 14, 28, 0.96);
+}
+
+/* Button Icon Micro-Shift */
+.btn svg {
+  transition: transform var(--duration-fast) var(--ease-out-expo);
+}
+
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+.btn-emergency:hover svg,
+.btn-whatsapp:hover svg {
+  transform: scale(1.1);
+}
+
+/* Editorial Proof Cards Sequential Reveal & Hover */
+.proof-card {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s ease,
+              border-color 0.25s ease;
+}
+
+.proof-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3.5px;
+  background: var(--color-orange-main);
+  transform: scaleY(0.7);
+  transform-origin: top;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-top-left-radius: var(--radius-sm);
+  border-bottom-left-radius: var(--radius-sm);
+}
+
+.proof-card:hover::before {
+  transform: scaleY(1);
+}
+
+.proof-card:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Editorial Service Cards Directional Transition */
+.editorial-service-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+}
+
+.editorial-service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 85, 0, 0.25);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card-media img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-service-card:hover .service-card-media img {
+  transform: scale(1.04);
+}
+
+/* Craftsmanship Masonry Gallery */
+.gallery-item {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 85, 0, 0.35);
+  box-shadow: 0 20px 48px -8px rgba(0, 0, 0, 0.75);
+}
+
+.gallery-item img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.035);
+}
+
+.gallery-overlay {
+  transition: background 0.4s ease, padding 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  background: linear-gradient(to top, rgba(3, 7, 18, 0.98) 0%, rgba(3, 7, 18, 0.45) 60%, transparent 100%);
+}
+
+/* Corridor Cards */
+.corridor-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.3s ease;
+}
+
+.corridor-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 85, 0, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+/* Triage Cards */
+.triage-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.3s ease;
+}
+
+.triage-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Tactical Selection Chips */
+.selection-chip {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              background-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.selection-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-orange-border);
+}
+
+.selection-chip.selected {
+  transform: translateY(-2px);
+}
+
+.selection-chip:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* --- 7. Keyframe Animations --- */
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+@keyframes pulse-orange {
+  0% { box-shadow: 0 0 0 0 rgba(255, 85, 0, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 85, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 85, 0, 0); }
+}
+
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: float-subtle 4.5s ease-in-out infinite;
+}
+
+/* --- 8. Back to Top Floating Action --- */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-navy-card);
+  border: 1.5px solid var(--color-navy-border);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: var(--z-sticky);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease,
+              border-color 0.2s ease;
+  box-shadow: var(--shadow-xl);
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+  background-color: var(--color-orange-main);
+  border-color: var(--color-orange-main);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255, 85, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    bottom: 76px;
+    right: 16px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* --- 9. Reduced Motion Accessibility Support --- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-clip,
+  .stagger-grid > *,
+  .hero-stagger-1,
+  .hero-stagger-2,
+  .hero-stagger-3,
+  .hero-stagger-4,
+  .hero-stagger-5 {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+  .pulse-dot {
+    animation: none !important;
+  }
+  .animate-float {
+    animation: none !important;
+  }
+  .hero-visual-card,
+  .editorial-service-card,
+  .gallery-item,
+  .corridor-card,
+  .triage-card,
+  .selection-chip,
+  .proof-card,
+  .btn svg,
+  .hero-spec-overlay {
+    transition: none !important;
+    transform: none !important;
+  }
+  .hero-visual-card:hover,
+  .editorial-service-card:hover,
+  .gallery-item:hover,
+  .corridor-card:hover,
+  .triage-card:hover,
+  .selection-chip:hover,
+  .proof-card:hover,
+  .btn:hover svg {
+    transform: none !important;
+  }
+}

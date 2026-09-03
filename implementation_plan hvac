@@ -1,0 +1,394 @@
+# ByCan HVAC Engineering - Premium Website Implementation Plan
+
+## Executive Summary & Research Findings
+
+This document outlines the strategic research, brand analysis, website architecture, and technical implementation plan for **ByCan HVAC Engineering**, a heating, ventilation, and air conditioning service provider based in Toronto (Etobicoke), Ontario, Canada.
+
+---
+
+## 1. Business Research & Intelligence Analysis
+
+### A. Branding & Visual Identity
+* **Business / Trading Names Identified:** 
+  * Social Identity: `hvac.bycan` / ByCan HVAC Engineering
+  * Lead Technician / Principal: ByCan Elnur
+  * Associated Parent/Sister Brand: ByCan (`bycan.ca` / Multi-service & home protection)
+  * Past / Affiliated Trade References: A-Plus Quality Inc. / Heating & Air Conditioning
+* **Current Social Visuals:**
+  * Real on-site job photos and Instagram reels highlighting high-skill mechanical trades: copper line brazing with oxy-acetylene torches, manifold gauge diagnostics, clean boiler manifold piping (NTI boilers), furnace component replacement, and air conditioner coil installations.
+  * Direct, authentic craftsmanship focus rather than polished corporate stock photos.
+* **Branding Opportunity for Website:**
+  * Elevate from a pure social media portfolio into a premier **"HVAC Engineering & Mechanical Precision"** brand.
+  * Contrast ByCan with low-tier contractors by spotlighting European technical discipline, certified hydronic/boiler engineering, clean brazing standards, and GTA-specific climate mastery.
+
+### B. Services Offered (Observed & Verified vs. Unverified)
+* **Verified via Public Posts & Listings:**
+  * **Hydronic & Boiler Systems:** High-efficiency boiler installations, manifold piping, NTI boiler setups, leak repairs, hydronic heating diagnostics.
+  * **Furnace Services:** Natural gas furnace repairs, emergency diagnostics, system maintenance, component replacements.
+  * **Air Conditioning:** Central AC installations, compressor/fan motor repairs, refrigerant charging, leak detection, precision copper line brazing.
+  * **Preventative Maintenance & Diagnostics:** Mechanical troubleshooting, seasonal tune-ups, filter and airflow checks.
+  * **Appliance Repairs:** Washer/dryer and major mechanical appliance servicing (referenced across ByCan brand assets).
+* **Services Requiring Client Verification (`[VERIFY]`):**
+  * `[VERIFY]` Heat Pump Installations & Cold-Climate Inverter Heat Pump conversions (eligible for Enbridge / Ontario Energy Rebates).
+  * `[VERIFY]` Ductless Mini-Split Systems (residential and multi-family condo/townhome installations).
+  * `[VERIFY]` Commercial HVAC Rooftop Units (RTUs) and commercial maintenance contracts.
+  * `[VERIFY]` Tankless & Tank Water Heater installations (Navien, Rinnai, etc.).
+  * `[VERIFY]` Indoor Air Quality (IAQ): HRVs, ERVs, HEPA filtration, humidifiers, and UV air purifiers.
+  * `[VERIFY]` Gas piping installation (BBQ lines, gas ranges, fireplace hookups).
+
+### C. Location & Service Area
+* **Verified Physical/Hub Location:** 
+  * `1460 The Queensway, Unit 103, Etobicoke, ON M8Z 1S7`
+* **Verified Primary Operating Areas:**
+  * Greater Toronto Area (GTA), explicitly Etobicoke, Toronto, Mississauga, and Brampton.
+* **Service Areas Requiring Client Verification (`[VERIFY]`):**
+  * `[VERIFY]` Specific service boundary radius: Halton Region (Oakville, Burlington, Milton), York Region (Vaughan, Markham, Richmond Hill), Durham Region (Pickering, Ajax).
+  * `[VERIFY]` Specific emergency dispatch travel zones and after-hours travel fees.
+
+### D. Contact & Communication Channels
+* **Verified Phone / WhatsApp / Text:** `+1 (437) 599-9215`
+* **Verified Email:** `info@bycan.ca` (or dedicated HVAC email `[VERIFY]`)
+* **Verified Social Media:**
+  * Instagram: `https://www.instagram.com/hvac.bycan/` (`@hvac.bycan`)
+  * Facebook: `https://www.facebook.com/hvac.bycan/` (`hvac.bycan`)
+
+### E. Current Promotions & Pricing Structure
+* **Publicly Observed:** No fixed public discounts or coupon codes are currently listed on social posts.
+* **Items to `[VERIFY]`:**
+  * `[VERIFY]` Spring/Summer AC Tune-Up specials (e.g., $99-$129 seasonal maintenance check).
+  * `[VERIFY]` Fall/Winter Furnace Safety Inspection specials.
+  * `[VERIFY]` Heat Pump Rebate assistance guidance (e.g., Enbridge Clean Home Heating Initiative / HER+ rebates up to $6,500+).
+  * `[VERIFY]` Free on-site estimates for new system replacements vs. standard diagnostic fee for repair calls.
+
+### F. Target Customers & Personas
+1. **The GTA Emergency Homeowner:**
+   * *Situation:* Furnace shuts down during a -15°C Toronto cold snap, or AC dies during a 32°C humid July weekend.
+   * *Needs:* Immediate phone access, guaranteed fast arrival, transparent upfront pricing, licensed gas technician.
+2. **The High-Efficiency Home Modernizer:**
+   * *Situation:* Replacing an aging 15+ year furnace/AC or installing a modern boiler/hydronic/heat pump system.
+   * *Needs:* Engineering expertise, brand recommendations (NTI, Navien, Lennox, Carrier), energy rebate navigation, craftsmanship warranty.
+3. **The Condo / Townhouse Resident:**
+   * *Situation:* Space constraints requiring ductless mini-splits, combi-boilers, or fan coils.
+   * *Needs:* Certified technician with condo building compliance, neat workspace, zero-mess protocol.
+4. **The Property Manager & Commercial Landlord:**
+   * *Situation:* Multi-unit properties needing scheduled maintenance, emergency response, and commercial invoicing.
+   * *Needs:* Priority dispatch, consolidated billing, reliable recurring service contracts.
+
+### G. The Customer Journey
+```mermaid
+flowchart LR
+    A[Discovery: Local Search / Instagram / Referral] --> B[Website Arrival: Instant Trust & Geo-Relevance]
+    B --> C{Urgency Level}
+    C -->|Emergency Breakdown| D[Sticky Call Now / Direct WhatsApp Dispatch]
+    C -->|Planned Upgrade/Quote| E[60-Sec Interactive Quote / Booking Form]
+    D --> F[Immediate Dispatch / Diagnostic Confirmation]
+    E --> F
+    F --> G[On-Site Engineering-Grade Execution]
+    G --> H[Follow-Up, Warranty Registration & Google Review]
+```
+
+### H. What a Professional HVAC Website Must Accomplish for ByCan
+1. **Maximize Immediate Lead Capture:** Turn urgent mobile searchers into phone calls and WhatsApp chats within 5 seconds.
+2. **Showcase Technical Mastery:** Use genuine craftsmanship assets (brazing, tidy piping, boiler installs) to convey premium engineering standards.
+3. **Establish Local Authority:** Optimize for high-intent hyper-local SEO keywords across Etobicoke, Mississauga, Toronto, and Brampton.
+4. **Demystify Pricing & Rebates:** Guide customers through Ontario heating/cooling rebates and replacement financing options.
+5. **Differentiate Through Transparency:** Provide clear explanations of diagnostic procedures, equipment choices, and warranty coverage.
+
+---
+
+## 2. Verified vs. Unverified Data Matrix
+
+| Business Data Point | Status | Observed Data | Action Required |
+| :--- | :--- | :--- | :--- |
+| **Business Name** | Verified | ByCan / ByCan HVAC Engineering (`hvac.bycan`) | Confirm exact legal header name for website |
+| **Phone Number** | Verified | `+1 (437) 599-9215` (Calls, SMS, WhatsApp) | Confirm main routing & after-hours dispatch line |
+| **Email Address** | Verified | `info@bycan.ca` | Confirm if dedicated `service@` or `hvac@` is preferred |
+| **Office Address** | Verified | 1460 The Queensway, Unit 103, Etobicoke, ON M8Z 1S7 | Confirm if customer walk-in is permitted or dispatch-only |
+| **Core Service Area** | Verified | Etobicoke, Toronto, Mississauga, Brampton (GTA) | `[VERIFY]` full expanded GTA boundary list |
+| **Boiler & Hydronic Heating** | Verified | Explicitly documented (NTI boilers, hydronics) | Feature prominently as a core specialty |
+| **Furnace & AC Repair/Install** | Verified | Documented on social channels | Core service pages |
+| **Precision Brazing / Mechanics**| Verified | Documented on Instagram/Facebook | Key visual differentiator for engineering quality |
+| **TSSA / Gas Fitter Licensing** | `[VERIFY]` | Standard Ontario requirement (G1/G2/313A/313D) | Obtain exact license numbers for footer badge |
+| **WSIB & Liability Insurance** | `[VERIFY]` | Standard Ontario commercial requirement | `[VERIFY]` coverage amount ($2M-$5M liability) |
+| **Warranty Terms** | `[VERIFY]` | Standard industry offers (1-year labor, 10-year parts) | `[VERIFY]` exact ByCan warranty commitments |
+| **Emergency Availability** | `[VERIFY]` | Fast response advertised on social | `[VERIFY]` exact hours (24/7 or 7 AM - 10 PM) |
+| **Rebate Partner Programs** | `[VERIFY]` | Ontario Clean Home Heating / Enbridge HER+ | `[VERIFY]` if registered as an Enbridge-approved contractor |
+| **Google Review Count/Rating** | `[VERIFY]` | Reviews distributed across platforms | `[VERIFY]` official Google Business Profile review link |
+
+---
+
+## 3. Proposed Website Architecture & Pages
+
+```mermaid
+graph TD
+    Home[Homepage / Overview Funnel]
+    Home --> Services[Services Hub]
+    Services --> S1[Heating & Furnace Solutions]
+    Services --> S2[Boilers & Hydronic Systems Speciality]
+    Services --> S3[Air Conditioning & Heat Pumps]
+    Services --> S4[Maintenance Plans & Diagnostics]
+    Home --> ServiceAreas[Service Areas / GTA Hub]
+    ServiceAreas --> A1[Etobicoke & West Toronto]
+    ServiceAreas --> A2[Mississauga & Brampton]
+    ServiceAreas --> A3[Downtown Toronto & GTA East]
+    Home --> About[Engineering & Craftsmanship Standards]
+    Home --> Rebates[Ontario Rebates & Financing Guide]
+    Home --> Contact[Emergency Dispatch & Quote Request]
+```
+
+### Page Breakdown
+1. **Homepage (`/`):** The primary conversion engine. Combines emergency dispatch CTA, craftsmanship proof, core service overview, interactive quote request wizard, and local trust badges.
+2. **Heating & Furnaces (`/services/heating-furnaces`):** Gas furnace diagnostics, emergency no-heat repairs, high-efficiency replacements, heat exchangers, and safety checks.
+3. **Boilers & Hydronic Heating (`/services/boilers-hydronics`):** Specialized engineering page highlighting NTI boiler installations, radiant in-floor heating, combi-boilers, and custom manifold piping.
+4. **Air Conditioning & Heat Pumps (`/services/cooling-heat-pumps`):** AC repair, seasonal tune-ups, high-efficiency heat pump upgrades, cold-climate inverter systems, refrigerant leak detection, and precision brazing.
+5. **Preventative Maintenance & Protection (`/services/maintenance`):** Annual tune-up checklists, seasonal filter replacement, safety inspections, and priority maintenance programs.
+6. **Service Areas (`/service-areas`):** Dedicated landing sections targeting Etobicoke, Toronto, Mississauga, Brampton, Oakville, and surrounding GTA communities for local SEO.
+7. **The ByCan Engineering Difference (`/about`):** Focus on technical precision, European craftsmanship background, zero-shortcut mechanical standards, and clean installation protocols.
+8. **Rebates & Financing (`/rebates-financing`):** Step-by-step breakdown of Enbridge / Ontario Clean Home Heating rebates, potential savings, and flexible payment options `[VERIFY]`.
+9. **Contact & Emergency Service (`/contact`):** Click-to-call, WhatsApp one-tap dispatch, 60-second quote form, operating hours, and service radius map.
+
+---
+
+## 4. Homepage Section Blueprint (Detailed UX Wireframe)
+
+### Section 1: Utility Notification & Top Bar (Above Nav)
+* **Urgent Notice Banner:** "⚡ Fast Dispatch Across Etobicoke & GTA • Call or WhatsApp: (437) 599-9215"
+* **Language/Region Selector:** "Toronto & GTA (Ontario)"
+* **Direct Links:** Fast Emergency Call Button (`tel:+14375999215`), WhatsApp Chat Link.
+
+### Section 2: Navigation Header
+* **Brand Logo:** "ByCan HVAC Engineering" with a modern flame/snowflake geometric badge.
+* **Nav Links:** 
+  * Services (Dropdown: Furnaces, Boilers & Hydronics, Air Conditioning, Heat Pumps, Maintenance)
+  * Why ByCan (Engineering Difference)
+  * Service Areas (Etobicoke, Toronto, Mississauga, Brampton)
+  * Ontario Rebates
+  * Reviews
+* **Right CTA Cluster:**
+  * Secondary: `(437) 599-9215` (with pulsing online indicator)
+  * Primary Accent Button: **"Request Service / Free Quote"**
+
+### Section 3: Hero Section (High-Impact Above the Fold)
+* **Tagline & Headline:** 
+  * *Overline:* "ENGINEERING-GRADE HEATING & COOLING SOLUTIONS"
+  * *H1:* **"Precision HVAC Craftsmanship for Toronto & GTA Homes."**
+  * *Subheadline:* "From emergency furnace and AC repairs to master-crafted hydronic boiler systems. Certified technicians, transparent pricing, and zero-compromise mechanical work."
+* **Dual Action Cluster:**
+  * Primary Button: **"Emergency Service Call"** (Red/Amber badge with phone link)
+  * Secondary Button: **"Get an Instant Online Estimate"** (Scrolls to interactive wizard)
+  * Tertiary Button: **"Chat on WhatsApp"** (Green icon badge)
+* **Live Trust Metrics (Factual & Verified):**
+  * 📍 Serving Etobicoke & Greater Toronto
+  * 🔧 Hydronic Boiler & Refrigeration Specialists
+  * ⚡ Same-Day & Emergency Response Available `[VERIFY]`
+  * 🛡️ Licensed & Insured Standards `[VERIFY]`
+
+### Section 4: "Why ByCan Engineering" (Craftsmanship Bar)
+* 4-Column Feature Highlight:
+  1. **Master-Grade Brazing & Piping:** Zero-leak nitrogen-purged brazing and clean copper manifold layouts.
+  2. **Hydronic & Boiler Authority:** Deep expertise in high-efficiency NTI and hydronic loop systems.
+  3. **Diagnostic Rigor:** We locate the root cause before recommending any replacement parts.
+  4. **Transparent Estimates:** Upfront diagnostic pricing with no hidden overtime surprises.
+
+### Section 5: Core Services Interactive Showcase
+* Tabbed / Filterable Card Grid:
+  * **Card 1: Hydronic Boilers & In-Floor Heating** (Highlighted Specialty) -> NTI installations, manifold balancing, combi-boiler retrofits.
+  * **Card 2: Gas Furnace Repair & Replacement** -> No-heat emergency diagnostic, blower motors, heat exchangers, smart thermostat integration.
+  * **Card 3: Air Conditioning & Heat Pumps** -> High-efficiency AC tune-ups, inverter heat pump conversions, refrigerant leak fixes.
+  * **Card 4: Seasonal Maintenance & Protection Plans** -> 21-point safety inspection, carbon monoxide checks, filter optimization.
+
+### Section 6: Interactive 60-Second Service Request & Cost Estimator
+* A frictionless, step-by-step interactive calculator on the homepage:
+  * *Step 1: Select System* (Furnace / Boiler / Air Conditioner / Heat Pump / General Maintenance)
+  * *Step 2: Service Type* (Emergency Repair / Annual Tune-up / New System Replacement / Rebate Inquiry)
+  * *Step 3: Property Type & Location* (House / Condo / Commercial in Toronto, Etobicoke, Mississauga, etc.)
+  * *Step 4: Contact & Preferred Time* (Name, Phone, Address, Urgency level: Immediate / Today / This Week)
+  * *Output:* Direct notification dispatched to ByCan with instant confirmation SMS/Email.
+
+### Section 7: The "Engineering Difference" Visual Craftsmanship Gallery
+* Interactive Before & After / Workmanship gallery showcasing:
+  * Clean NTI boiler manifold installations with brass valves and neat wiring.
+  * High-temp oxy-acetylene brazing demonstration on refrigerant lines.
+  * Tidy furnace duct transitions and electrical hookups.
+  * Brand Equipment Compatibility (NTI, Navien, Lennox, Carrier, Mitsubishi, Daikin, Resideo/Honeywell).
+
+### Section 8: How It Works (4-Step Frictionless Process)
+1. **Request or Call:** Submit online in 60s or dial `(437) 599-9215` for urgent dispatch.
+2. **Precision On-Site Diagnostic:** We inspect your unit with professional digital manifolds and combustion analyzers.
+3. **Upfront Transparent Quote:** You get a fixed, clear explanation before any wrench turns.
+4. **Guaranteed Execution & Clean Finish:** Clean work, test runs, and complete site cleanup.
+
+### Section 9: Ontario Rebate & Energy Savings Guide
+* Explanatory callout for GTA homeowners:
+  * "Save up to thousands on eligible heat pump and high-efficiency heating retrofits."
+  * Overview of current Ontario clean energy incentives `[VERIFY]`.
+  * CTA: **"Check My Rebate Eligibility"**.
+
+### Section 10: GTA Service Areas & Live Coverage Map
+* Interactive interactive coverage map / pills:
+  * Etobicoke (Queensway, Lakeshore, Islington, Kingsway, Rexdale)
+  * Toronto (Downtown, Midtown, North York, Scarborough)
+  * Mississauga (Port Credit, Streetsville, City Centre, Meadowvale)
+  * Brampton & Peel Region
+  * CTA: "Need service outside these zones? Call (437) 599-9215 to verify availability."
+
+### Section 11: Real Reviews & Trust Assurance Hub
+* Verified customer testimonial slider (`[VERIFY]` client review import).
+* Badges for Gas Technician certifications, Safety Standards, and Manufacturer Trained status `[VERIFY]`.
+
+### Section 12: High-Conversion Pre-Footer Call to Action
+* Dual-option banner:
+  * Left: "Need Emergency Heating or AC Service Right Now?" -> **Call (437) 599-9215**
+  * Right: "Planning a New Boiler, Furnace, or Heat Pump Installation?" -> **Book a Free In-Home Estimate**
+
+### Section 13: Footer
+* Complete business info: ByCan HVAC Engineering, 1460 The Queensway #103, Etobicoke, ON M8Z 1S7.
+* Phone: `+1 (437) 599-9215` | Email: `info@bycan.ca`
+* Links to all individual service pages and service areas.
+* Social media links (Instagram `@hvac.bycan`, Facebook `hvac.bycan`).
+* Disclaimers: Licensed Gas Contractor & Refrigeration Service in Ontario `[VERIFY]`.
+
+---
+
+## 5. Conversion & CTA Strategy
+
+### Dual-Friction Funnel Architecture
+1. **Urgent Track (Emergency & Fast Repair):**
+   * *Target:* No heat in winter, water leaking from boiler, AC down in summer heatwave.
+   * *CTAs:* Sticky **"Emergency Call: (437) 599-9215"** + **"WhatsApp Technician"** with instant 1-tap dial.
+   * *Placement:* Sticky header, top utility banner, mobile bottom dock, and dedicated emergency triggers.
+2. **Considered Track (Planned Replacements, Boilers, Rebates):**
+   * *Target:* Homeowner planning a new furnace, boiler upgrade, or seeking rebate assistance.
+   * *CTAs:* **"Request Free Quote"**, **"Calculate Rebate Savings"**, **"Book Inspection"**.
+   * *Placement:* Hero secondary button, interactive 60-second wizard, service page bottom forms.
+
+### Mobile-Specific Experience (Mobile-First HVAC Standard)
+* Over 70% of residential emergency HVAC searches occur on smartphones.
+* **Sticky Bottom Navigation Dock:**
+  * Button 1 (Phone): `[ 📞 Call Now: (437) 599-9215 ]` (Direct dial)
+  * Button 2 (WhatsApp): `[ 💬 WhatsApp ]` (Instant pre-filled message: *"Hi ByCan HVAC, I need assistance with my heating/cooling system..."*)
+  * Button 3 (Quote): `[ 📝 Request Service ]` (Opens quick slide-up modal)
+* Large thumb-friendly touch targets (min 48px height), auto-formatting phone inputs, and one-tap address autofill.
+
+---
+
+## 6. Premium Visual Design System & Aesthetics
+
+### Visual Concept: "Industrial Precision Meets Canadian Luxury"
+The design will avoid tacky clip-art or generic blue/red stock templates. Instead, it will project **high-precision engineering, clean mechanical craft, and dependable Canadian home comfort**.
+
+### Curated Color Palette
+```
+Primary Dark (Deep Graphite / Obsidian):     #0A0E17 (Backgrounds, hero depth, contrast)
+Card Surface (Dark Titanium Slate):          #111827 (Glassmorphic cards, containers)
+Secondary Neutral (Subtle Muted Zinc):       #1E293B (Borders, card dividers, subtle accents)
+Heating & Energy Accent (Flame Amber/Orange):#F59E0B / #F97316 (Heating, urgency, primary CTA highlights)
+Cooling & Refrigeration (Arctic Cyan/Ice):   #06B6D4 / #38BDF8 (Cooling, AC services, fresh airflow)
+Engineering Steel (Metallic Silver/Gray):    #E2E8F0 / #94A3B8 (Clean text, technical specs, borders)
+High-Contrast Text (Pure Off-White):         #F8FAFC (Headings, crisp readability)
+Success / Availability (Emerald Green):      #10B981 (Live status indicator, WhatsApp, verified badges)
+```
+
+### Typography System
+* **Heading Font:** **`Outfit`** or **`Plus Jakarta Sans`** (Google Fonts)
+  * Bold, architectural, modern geometric font conveying precision engineering and authority.
+* **Body & Spec Font:** **`Inter`** (Google Fonts)
+  * High-legibility font engineered for clear reading on mobile screens, technical specs, and form inputs.
+* **Monospace / Metric Accents:** **`JetBrains Mono`** or **`Space Mono`** for license badges, technical BTU ratings, and model numbers.
+
+### Imagery & Media Guidelines
+* **Authentic Job-Site Visuals:** Spotlight real copper brazing flames, NTI boiler manifold loops, neat wiring, digital gauge readings, and technician uniforms.
+* **Equipment Badges:** Clean, authentic vector logos for recognized industry equipment (NTI, Navien, Lennox, Carrier, Mitsubishi Electric, Resideo/Honeywell).
+* **Zero Generic Stock Photos:** Replace generic smiling models holding clipboards with high-resolution photography of real HVAC engineering installations and clean Canadian homes.
+
+---
+
+## 7. Local SEO & Technical Search Architecture
+
+### Local Search Targeting (Greater Toronto Area)
+* **Primary Target Geographies:**
+  * Etobicoke (M8Z, M8X, M8Y, M9A, M9B, M9C, M9R, M9V, M9W)
+  * Mississauga (L5A, L5B, L5C, L5M, L5N, L4W, L4Z)
+  * Toronto (Old Toronto, High Park, Bloor West, North York, York, East York)
+  * Brampton (L6P, L6R, L6S, L6T, L6V, L6W, L6X, L6Y, L6Z)
+* **Keyword Strategy:**
+  * High-Intent Urgency: `emergency furnace repair Etobicoke`, `furnace repair Toronto`, `AC repair Mississauga`, `boiler repair Toronto GTA`.
+  * Specialty Engineering: `NTI boiler installation Toronto`, `hydronic heating repair Etobicoke`, `condo fan coil service GTA`, `heat pump conversion Ontario rebates`.
+* **Schema.org Structured Data (JSON-LD):**
+  * `HVACBusiness` & `LocalBusiness` schema with exact coordinates (`Etobicoke, ON`), telephone `+14375999215`, address `1460 The Queensway #103`, priceRange `$$`, areaServed (`Toronto`, `Etobicoke`, `Mississauga`, `Brampton`), and openingHours.
+  * `Service` schema for each individual offering (Furnace Repair, Boiler Installation, AC Service).
+  * `FAQPage` schema on service pages for Google Rich Snippets.
+
+---
+
+## 8. Technical Architecture & Component Tree
+
+### Technology Stack
+* **Core:** High-performance, clean Vanilla HTML5, Modern CSS (Design Tokens & CSS Custom Properties), and Modular JavaScript (ES Modules) or Next.js/Vite React framework.
+* **Styling:** Custom CSS with Glassmorphism, smooth CSS micro-interactions, dark/light mode luxury support, and fluid typography.
+* **Forms & Lead Dispatch:** Client-side validated interactive wizard sending instant lead alerts (via webhook/email/SMS API) to `info@bycan.ca` and WhatsApp click-to-chat.
+* **Performance Benchmark:** 95+ Google Lighthouse Score (Core Web Vitals), sub-second First Contentful Paint (FCP), zero layout shift (CLS).
+
+### Recommended Component & Directory Structure
+```
+hvac-bycan-website/
+├── index.html                   # High-converting master homepage
+├── services.html                # Services hub
+├── heating-furnaces.html        # Furnace & heating repair/install
+├── boilers-hydronics.html       # Specialized hydronics & boiler engineering
+├── cooling-heat-pumps.html      # AC repair, mini-splits & heat pumps
+├── maintenance.html             # Annual tune-ups & safety plans
+├── service-areas.html           # GTA coverage & local landing hub
+├── about.html                   # Engineering standards & story
+├── contact.html                 # Emergency dispatch & quote booking
+├── robots.txt
+├── sitemap.xml
+├── assets/
+│   ├── css/
+│   │   ├── variables.css        # Color tokens, typography, shadows, spacing
+│   │   ├── base.css             # Resets, typography, layout foundation
+│   │   ├── components.css       # Buttons, cards, modals, form wizard, badges
+│   │   ├── animations.css       # Glows, pulse rings, smooth fade-in transitions
+│   │   └── responsive.css       # Mobile-first docks, tablet & desktop grids
+│   ├── js/
+│   │   ├── main.js              # Header scroll, mobile drawer, interactive tabs
+│   │   ├── quote-wizard.js      # 4-step interactive service cost & quote calculator
+│   │   ├── emergency-dock.js    # Sticky mobile dispatch bar & WhatsApp integrations
+│   │   ├── schema-ld.js         # Dynamic local business JSON-LD injection
+│   │   └── reviews-slider.js    # Testimonial carousel & gallery lightbox
+│   └── images/
+│       ├── brand/               # ByCan HVAC Engineering logos, icons, badges
+│       ├── equipment/           # NTI, Navien, Lennox, Carrier, Resideo logos
+│       ├── gallery/             # Brazing, boiler piping, furnace installations
+│       └── icons/               # Custom SVG icons (flame, snowflake, gauge, wrench, shield)
+```
+
+---
+
+## 9. Verification & Onboarding Checklist for ByCan
+
+Before taking the final design live, the following items should be reviewed and verified with ByCan Elnur / ByCan Management:
+
+- [ ] **License Numbers:** Confirm TSSA Heating Contractor registration number and 313A / Gas Technician G1/G2 licensing details.
+- [ ] **Insurance:** Confirm commercial general liability coverage amount (e.g. $2,000,000 / $5,000,000) for trust badges.
+- [ ] **Emergency Operating Hours:** Confirm exact dispatch hours (e.g., 24 Hours / 7 Days, or 7:00 AM – 10:00 PM).
+- [ ] **Primary Inbound Dispatch Phone:** Confirm `(437) 599-9215` as the primary number for call tracking and WhatsApp routing.
+- [ ] **Ontario Rebate Affiliation:** Confirm participation in Enbridge Clean Home Heating / HER+ energy rebate programs.
+- [ ] **Equipment Partner Authorizations:** Confirm preferred brands (e.g., NTI, Navien, Lennox, Carrier, Bosch, Mitsubishi) for official badge display.
+- [ ] **Google Business Profile:** Link official Google Maps / Business Profile CID for automated review integration.
+
+---
+
+## 10. Execution Roadmap & Next Steps
+
+1. **Phase 1: Architecture & Design System Approval (Current Step)**
+   * Review this implementation plan and approve brand styling tokens, color palette, and page structure.
+2. **Phase 2: Master Component & Homepage Construction**
+   * Build the complete design system (`variables.css`, `base.css`, `components.css`).
+   * Assemble the high-converting homepage with the hero, craftsmanship showcase, interactive quote wizard, and sticky mobile dispatch dock.
+3. **Phase 3: Specialized Service & Engineering Pages**
+   * Implement dedicated pages for Boilers & Hydronics (key differentiator), Heating & Furnaces, Air Conditioning, and GTA Service Areas.
+4. **Phase 4: Interactive Functionality & Lead Dispatch**
+   * Wire up the interactive 60-second quote calculator, WhatsApp direct connect, and client-side form validation.
+5. **Phase 5: Local SEO & Performance Optimization**
+   * Inject complete Schema.org `HVACBusiness` JSON-LD, optimize assets for 95+ Core Web Vitals, and conduct cross-device mobile testing.

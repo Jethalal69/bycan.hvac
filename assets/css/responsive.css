@@ -1,0 +1,274 @@
+/* ==========================================================================
+   ByCan HVAC Engineering — Responsive Breakpoints & Viewport Adaptations
+   ========================================================================== */
+
+/* --- Tablet / Medium Screens (<= 1024px) --- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .editorial-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .editorial-visual-frame img {
+    height: 400px;
+  }
+
+  .editorial-service-card {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-media {
+    min-height: 260px;
+  }
+
+  .craft-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-item-wide,
+  .gallery-item-tall,
+  .gallery-item-half {
+    grid-column: span 1;
+    height: 320px;
+  }
+
+  .corridor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .triage-hub {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* --- Mobile Viewport (<= 768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --space-4xl: 3.5rem;
+    --space-3xl: 2.5rem;
+    --space-2xl: 2rem;
+  }
+
+  .container {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+
+  .utility-bar .hidden-mobile {
+    display: none;
+  }
+
+  .nav-menu,
+  .header-actions .header-phone-group,
+  .header-actions .btn {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  .hero {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+    line-height: 1.12;
+  }
+
+  .hero-visual-card img {
+    height: 320px;
+  }
+
+  .hero-spec-overlay {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 14px;
+  }
+
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .corridor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .craft-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item-wide,
+  .gallery-item-tall,
+  .gallery-item-half {
+    grid-column: span 1;
+    height: 260px;
+  }
+
+  .instagram-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service-checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-content {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .request-console {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .console-progress-track {
+    padding: 0;
+  }
+
+  .console-progress-rail,
+  .console-progress-fill {
+    left: 20px;
+    right: 20px;
+    top: 18px;
+  }
+
+  .console-step-circle {
+    width: 36px;
+    height: 36px;
+    font-size: var(--text-xs);
+  }
+
+  .console-step-label {
+    font-size: var(--text-2xs);
+    margin-top: 6px;
+  }
+
+  /* Touch Target Minimums (>= 44px) */
+  .btn,
+  .mobile-menu-toggle,
+  .dock-item,
+  .back-to-top-btn,
+  .seasonal-cta {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chip-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .selection-chip {
+    padding: 16px 12px;
+    gap: 8px;
+  }
+
+  .chip-icon-box {
+    width: 38px;
+    height: 38px;
+  }
+
+  .chip-icon-box svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .chip-label {
+    font-size: var(--text-xs);
+  }
+
+  .chip-sub {
+    font-size: 0.6875rem;
+  }
+
+  .summary-card-grid,
+  .modal-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .console-modal-card {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  /* Show Sticky Action Dock on Mobile */
+  .mobile-action-dock {
+    display: block;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+  }
+
+  body {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* --- Small Mobile Screens (<= 480px) --- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.15;
+  }
+
+  .hero-lead {
+    font-size: 0.9375rem;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-cta-row .btn {
+    width: 100%;
+  }
+
+  .chip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selection-chip {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 14px 16px;
+  }
+
+  .discovery-tab-btn {
+    padding: 7px 12px;
+    font-size: 0.72rem;
+  }
+
+  .instagram-strip {
+    grid-template-columns: 1fr;
+  }
+}

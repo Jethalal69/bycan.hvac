@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heat Pumps & Central AC Systems | ByCan HVAC</title>
+  <meta name="description" content="Cold-climate inverter heat pumps, sub-zero heating to -30°C, central air conditioning installations, and dry nitrogen line brazing across Toronto and the GTA.">
+  <link rel="canonical" href="https://bycan.ca/cooling-heat-pumps.html">
+  <link rel="icon" type="image/png" href="assets/images/brand/bycan-logo.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Initial Premium Branded Intro / Loading Screen -->
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true" role="status" aria-label="Loading ByCan HVAC Engineering">
+    <div class="preloader-content">
+      <div class="preloader-brand">
+        <div class="preloader-icon">
+          <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+        </div>
+        <div class="preloader-text">
+          <span class="preloader-name">BYCAN</span>
+          <span class="preloader-tagline">HVAC ENGINEERING</span>
+        </div>
+      </div>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-bar" id="preloaderProgressBar"></div>
+      </div>
+      <div class="preloader-micro">
+        <span>PRECISION • PERFORMANCE • COMFORT</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Top Utility Bar -->
+  <aside class="utility-bar">
+    <div class="container">
+      <div class="utility-left">
+        <span class="status-beacon"><span class="pulse-dot"></span> AC & Inverter Heat Pump Technicians On-Call</span>
+      </div>
+      <div class="utility-right">
+        <a href="tel:+14375999215" class="utility-link">📞 Dispatch: <strong>(437) 599-9215</strong></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">BYCAN</span>
+          <span class="brand-tagline">HVAC ENGINEERING</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="boilers-hydronics.html" class="nav-link">Boilers & Hydronics</a>
+        <a href="heating-furnaces.html" class="nav-link">Furnaces</a>
+        <a href="cooling-heat-pumps.html" class="nav-link active">AC & Heat Pumps</a>
+        <a href="service-areas.html" class="nav-link">Service Areas</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+14375999215" class="btn btn-primary btn-sm">Call AC Service</a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="brand-logo">
+          <div class="brand-icon">
+            <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">BYCAN</span>
+            <span class="brand-tagline">HVAC ENGINEERING</span>
+          </div>
+        </div>
+        <button id="drawerCloseBtn" style="background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer;">✕</button>
+      </div>
+      <div class="drawer-links">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="services.html" class="drawer-link">All Services</a>
+        <a href="boilers-hydronics.html" class="drawer-link">Boilers & Hydronics</a>
+        <a href="heating-furnaces.html" class="drawer-link">Gas Furnaces</a>
+        <a href="cooling-heat-pumps.html" class="drawer-link">AC & Heat Pumps</a>
+        <a href="service-areas.html" class="drawer-link">Service Areas</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+      <a href="tel:+14375999215" class="btn btn-emergency" style="width: 100%;">Call (437) 599-9215</a>
+      <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">WhatsApp Direct</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="section section-dark tech-grid-bg" style="padding-top: var(--space-3xl); padding-bottom: var(--space-3xl);">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center;">
+        <div class="reveal-left">
+          <div class="eyebrow eyebrow-blue">REFRIGERATION & HEAT PUMP ENGINEERING</div>
+          <h1 style="font-size: var(--text-hero); line-height: 1.1; margin-bottom: var(--space-md);">
+            Cold-Climate Inverter Heat Pumps & AC.
+          </h1>
+          <p class="lead" style="color: #cbd5e1; margin-bottom: var(--space-xl);">
+            Keep your GTA home cool during hot humid summers and efficiently heated all winter with advanced inverter heat pumps, nitrogen leak testing, and master-grade line brazing.
+          </p>
+          <div class="flex gap-md" style="flex-wrap: wrap;">
+            <a href="tel:+14375999215" class="btn btn-primary btn-lg">Call AC Service: (437) 599-9215</a>
+            <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">WhatsApp Technician</a>
+            <a href="index.html#requestConsole" class="btn btn-secondary btn-lg">Request Service</a>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="hero-visual-card">
+            <img src="assets/images/gallery/heatpump-winter.jpg" alt="Architectural Cold Climate Heat Pump Setup">
+            <div class="hero-spec-overlay">
+              <div>
+                <div class="spec-title">Cold-Climate Inverter Setup</div>
+                <div class="spec-desc">Sub-Zero Operation to -30°C • Slim Duct Covers</div>
+              </div>
+              <div class="spec-tag">SEER2 High Efficiency</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Engineering Difference in Cooling -->
+  <section class="section section-stone">
+    <div class="container">
+      <div class="section-header text-left reveal-up">
+        <div class="eyebrow eyebrow-blue">REFRIGERATION STANDARDS</div>
+        <h2 class="section-title">Why Nitrogen-Purged Brazing Protects Your Equipment</h2>
+        <p class="section-desc">When copper lines are brazed without nitrogen, black copper oxide flaking enters the refrigerant loop and destroys expansion valves.</p>
+      </div>
+
+      <div class="proof-stack stagger-grid">
+        <div class="proof-card">
+          <div class="proof-header">
+            <span class="proof-title">1. Dry Nitrogen Shielding During Torch Brazing</span>
+            <span class="proof-spec">Zero Contamination</span>
+          </div>
+          <p class="proof-desc">We displace oxygen with a steady nitrogen trickle during all high-temperature sil-phos brazing joints, keeping the internal tubing surgical-clean.</p>
+        </div>
+
+        <div class="proof-card">
+          <div class="proof-header">
+            <span class="proof-title">2. Deep Vacuum Micron Evacuation</span>
+            <span class="proof-spec">&lt; 500 Microns Target</span>
+          </div>
+          <p class="proof-desc">Using dual-stage vacuum pumps and digital micron gauges to boil off non-condensable moisture before releasing the refrigerant charge.</p>
+        </div>
+
+        <div class="proof-card">
+          <div class="proof-header">
+            <span class="proof-title">3. Elevated Snow Bracket Wall Mounting</span>
+            <span class="proof-spec">Ontario Winter Resilient</span>
+          </div>
+          <p class="proof-desc">Installing outdoor heat pumps on heavy-duty cantilever wall brackets to prevent snow burial, ice build-up, and restricted airflow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: var(--space-md);">
+            <div class="brand-icon">
+              <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">BYCAN</span>
+              <span class="brand-tagline">HVAC ENGINEERING</span>
+            </div>
+          </div>
+          <p style="font-size: var(--text-xs); color: #94a3b8; margin-bottom: var(--space-md); line-height: 1.6;">
+            TSSA Registered Heating & Cooling Contractor #007684321. Hydronic boilers, gas furnaces, and cold-climate heat pumps across Toronto, Etobicoke, Mississauga, and Brampton.
+          </p>
+          <div class="flex gap-sm">
+            <a href="https://www.instagram.com/hvac.bycan/" target="_blank" rel="noopener noreferrer" style="color: var(--color-orange-main); font-weight: 700; font-size: var(--text-xs);">Instagram: @hvac.bycan &rarr;</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Specialties</h4>
+          <div class="footer-links">
+            <a href="boilers-hydronics.html">Hydronic Boilers & Radiant</a>
+            <a href="heating-furnaces.html">Gas Furnace Repairs</a>
+            <a href="cooling-heat-pumps.html">Inverter Heat Pumps</a>
+            <a href="services.html">All HVAC Services</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Service Areas</h4>
+          <div class="footer-links">
+            <a href="service-areas.html">Etobicoke (Headquarters Hub)</a>
+            <a href="service-areas.html">City of Toronto & Midtown</a>
+            <a href="service-areas.html">Mississauga & Peel Region</a>
+            <a href="service-areas.html">Brampton Corridor</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Etobicoke Hub</h4>
+          <div class="footer-contact-list">
+            <div class="contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>1460 The Queensway, Unit 103<br>Etobicoke, ON M8Z 1S7</span>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Phone / WhatsApp: <a href="tel:+14375999215" style="color: #ffffff; font-weight: 700;">(437) 599-9215</a></span>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Email: <a href="mailto:info@bycan.ca" style="color: #ffffff;">info@bycan.ca</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 ByCan HVAC Engineering. All rights reserved. TSSA Registered Contractor #007684321 • Licensed, Bonded & Insured.
+        </div>
+        <div style="display: flex; gap: var(--space-md);">
+          <a href="privacy-policy.html" style="color: #94a3b8; text-decoration: underline;">Privacy Policy</a>
+          <a href="terms-of-service.html" style="color: #94a3b8; text-decoration: underline;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Mobile Sticky Dock -->
+  <div class="mobile-action-dock">
+    <div class="dock-grid">
+      <a href="tel:+14375999215" class="dock-item dock-call">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Call (437) 599-9215</span>
+      </a>
+      <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="dock-item dock-whatsapp">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.524 1.961.815 2.796.815 3.183 0 5.768-2.587 5.769-5.767.001-3.181-2.585-5.767-5.769-5.767zm0-2.172c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8-1.42 0-2.75-.37-3.9-1.02l-4.131 1.082 1.101-4.022c-.73-1.22-1.17-2.63-1.17-4.14 0-4.418 3.582-8 8-8z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <a href="index.html#requestConsole" class="dock-item dock-quote">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m-6 9 2 2 4-4"/></svg>
+        <span>Request Service</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

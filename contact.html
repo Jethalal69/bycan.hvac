@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Emergency Dispatch | ByCan HVAC Engineering Toronto</title>
+  <meta name="description" content="Contact ByCan HVAC Engineering for emergency heating and cooling dispatch, boiler repairs, and free estimates across Toronto, Etobicoke, Mississauga, and Brampton.">
+  <link rel="canonical" href="https://bycan.ca/contact.html">
+  <link rel="icon" type="image/png" href="assets/images/brand/bycan-logo.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Initial Premium Branded Intro / Loading Screen -->
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true" role="status" aria-label="Loading ByCan HVAC Engineering">
+    <div class="preloader-content">
+      <div class="preloader-brand">
+        <div class="preloader-icon">
+          <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+        </div>
+        <div class="preloader-text">
+          <span class="preloader-name">BYCAN</span>
+          <span class="preloader-tagline">HVAC ENGINEERING</span>
+        </div>
+      </div>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-bar" id="preloaderProgressBar"></div>
+      </div>
+      <div class="preloader-micro">
+        <span>PRECISION • PERFORMANCE • COMFORT</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Top Utility Bar -->
+  <aside class="utility-bar">
+    <div class="container">
+      <div class="utility-left">
+        <span class="status-beacon"><span class="pulse-dot"></span> Emergency HVAC Dispatch Line Active</span>
+      </div>
+      <div class="utility-right">
+        <a href="tel:+14375999215" class="utility-link">📞 Direct: <strong>(437) 599-9215</strong></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">BYCAN</span>
+          <span class="brand-tagline">HVAC ENGINEERING</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="boilers-hydronics.html" class="nav-link">Boilers & Hydronics</a>
+        <a href="heating-furnaces.html" class="nav-link">Furnaces</a>
+        <a href="cooling-heat-pumps.html" class="nav-link">AC & Heat Pumps</a>
+        <a href="service-areas.html" class="nav-link">Service Areas</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+14375999215" class="btn btn-emergency btn-sm">Emergency Call</a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="brand-logo">
+          <div class="brand-icon">
+            <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">BYCAN</span>
+            <span class="brand-tagline">HVAC ENGINEERING</span>
+          </div>
+        </div>
+        <button id="drawerCloseBtn" style="background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer;">✕</button>
+      </div>
+      <div class="drawer-links">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="services.html" class="drawer-link">All Services</a>
+        <a href="boilers-hydronics.html" class="drawer-link">Boilers & Hydronics</a>
+        <a href="heating-furnaces.html" class="drawer-link">Gas Furnaces</a>
+        <a href="cooling-heat-pumps.html" class="drawer-link">AC & Heat Pumps</a>
+        <a href="service-areas.html" class="drawer-link">Service Areas</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+      <a href="tel:+14375999215" class="btn btn-emergency" style="width: 100%;">Call (437) 599-9215</a>
+      <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">WhatsApp Direct</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="section section-dark tech-grid-bg" style="padding-top: var(--space-3xl); padding-bottom: var(--space-3xl);">
+    <div class="container">
+      <div class="section-header text-left reveal-left" style="margin-bottom: 0;">
+        <div class="eyebrow eyebrow-green">3 CONVENIENT WAYS TO CONNECT</div>
+        <h1 style="font-size: var(--text-hero); line-height: 1.1; margin-bottom: var(--space-md);">
+          Connect With ByCan HVAC.
+        </h1>
+        <p class="lead" style="color: #cbd5e1; max-width: 780px;">
+          For emergency no-heat or no-cool breakdowns, please call or WhatsApp directly for priority triage. For planned quotes and assessments, use the form below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Tier Conversion Hub & Intake -->
+  <section class="section section-stone">
+    <div class="container">
+      <div class="triage-hub stagger-grid" style="margin-bottom: var(--space-3xl);">
+        <!-- Card 1: Emergency -->
+        <div class="triage-card triage-card-emergency">
+          <div>
+            <div class="triage-eyebrow" style="color: var(--color-red-emergency);">🚨 EMERGENCY PRIORITY</div>
+            <h3 class="triage-title">No-Heat / No-Cool Breakdown</h3>
+            <p class="triage-desc">Direct line to our on-call technician for urgent emergency triage across the GTA.</p>
+          </div>
+          <div>
+            <a href="tel:+14375999215" class="btn btn-emergency" style="width: 100%;">
+              📞 Call: (437) 599-9215
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: WhatsApp -->
+        <div class="triage-card triage-card-whatsapp">
+          <div>
+            <div class="triage-eyebrow" style="color: var(--color-whatsapp);">💬 WHATSAPP DIRECT</div>
+            <h3 class="triage-title">Quick Photos & Error Codes</h3>
+            <p class="triage-desc">Send photos of your boiler error code, furnace model tag, or mechanical room for advice.</p>
+          </div>
+          <div>
+            <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+              Chat on WhatsApp Direct
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Hub Address -->
+        <div class="triage-card triage-card-quote">
+          <div>
+            <div class="triage-eyebrow" style="color: var(--color-orange-main);">📍 DISPATCH HUB</div>
+            <h3 class="triage-title">Etobicoke Headquarters</h3>
+            <p class="triage-desc">1460 The Queensway, Unit 103, Etobicoke, ON M8Z 1S7<br>Email: info@bycan.ca</p>
+          </div>
+          <div>
+            <a href="mailto:info@bycan.ca" class="btn btn-secondary" style="width: 100%;">
+              Email Our Team
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Request Form (Clean Stone Surface) -->
+      <div class="corridor-card reveal-up" style="max-width: 800px; margin-left: auto; margin-right: auto; padding: var(--space-2xl);">
+        <h2 style="font-size: var(--text-2xl); margin-bottom: 8px;">Submit A Service Inquiry</h2>
+        <p style="font-size: var(--text-sm); color: var(--text-on-light-muted); margin-bottom: var(--space-lg);">Fill in your details and our team will follow up to confirm dispatch availability.</p>
+
+        <form id="contactForm">
+          <div class="grid grid-2" style="gap: var(--space-md); margin-bottom: var(--space-md);">
+            <div class="form-group">
+              <label class="console-label" for="contactName" style="color: var(--text-on-light-primary);">Full Name</label>
+              <input type="text" id="contactName" class="console-input" required placeholder="John Smith" style="background-color: #ffffff; color: #000; border-color: var(--border-light-strong);">
+            </div>
+            <div class="form-group">
+              <label class="console-label" for="contactPhone" style="color: var(--text-on-light-primary);">Phone Number</label>
+              <input type="tel" id="contactPhone" class="console-input" required placeholder="(437) 599-9215" style="background-color: #ffffff; color: #000; border-color: var(--border-light-strong);">
+            </div>
+          </div>
+
+          <div class="grid grid-2" style="gap: var(--space-md); margin-bottom: var(--space-md);">
+            <div class="form-group">
+              <label class="console-label" for="contactEmail" style="color: var(--text-on-light-primary);">Email Address</label>
+              <input type="email" id="contactEmail" class="console-input" required placeholder="name@example.com" style="background-color: #ffffff; color: #000; border-color: var(--border-light-strong);">
+            </div>
+            <div class="form-group">
+              <label class="console-label" for="contactService" style="color: var(--text-on-light-primary);">Equipment / Service</label>
+              <select id="contactService" class="console-input" style="background-color: #ffffff; color: #000; border-color: var(--border-light-strong);">
+                <option value="Hydronic Boiler">Hydronic Boiler Installation / Repair</option>
+                <option value="Gas Furnace">Gas Furnace Emergency / Service</option>
+                <option value="AC / Heat Pump">Air Conditioning / Heat Pump</option>
+                <option value="Maintenance">Annual 21-Point Maintenance</option>
+                <option value="Other">Other Mechanical Inquiries</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: var(--space-lg);">
+            <label class="console-label" for="contactMessage" style="color: var(--text-on-light-primary);">Equipment Model / Details</label>
+            <textarea id="contactMessage" class="console-textarea" rows="3" placeholder="Describe the issue, unit model, or address..." style="background-color: #ffffff; color: #000; border-color: var(--border-light-strong);"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Submit Service Request &rarr;
+          </button>
+        </form>
+      </div>
+
+      <!-- Interactive Google Maps Dispatch Hub Widget -->
+      <div class="reveal-up" style="max-width: 800px; margin: var(--space-2xl) auto 0;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <h3 style="font-size: var(--text-base); font-weight: 700; color: var(--text-on-light-primary);">📍 Dispatch Headquarters Location</h3>
+          <span style="font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--color-orange-main); font-weight: 600;">1460 The Queensway, Unit 103, Etobicoke</span>
+        </div>
+        <div class="map-frame-wrap">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.6659795101684!2d-79.5323799234125!3d43.613426755006614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b37c02ce9bf31%3A0x6b6f7e8a946b1580!2s1460%20The%20Queensway%2C%20Etobicoke%2C%20ON%20M8Z%201S7%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="ByCan HVAC Engineering Etobicoke Headquarters Location Map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: var(--space-md);">
+            <div class="brand-icon">
+              <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">BYCAN</span>
+              <span class="brand-tagline">HVAC ENGINEERING</span>
+            </div>
+          </div>
+          <p style="font-size: var(--text-xs); color: #94a3b8; margin-bottom: var(--space-md); line-height: 1.6;">
+            TSSA Registered Heating & Cooling Contractor #007684321. Hydronic boilers, gas furnaces, and cold-climate heat pumps across Toronto, Etobicoke, Mississauga, and Brampton.
+          </p>
+          <div class="flex gap-sm">
+            <a href="https://www.instagram.com/hvac.bycan/" target="_blank" rel="noopener noreferrer" style="color: var(--color-orange-main); font-weight: 700; font-size: var(--text-xs);">Instagram: @hvac.bycan &rarr;</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Specialties</h4>
+          <div class="footer-links">
+            <a href="boilers-hydronics.html">Hydronic Boilers & Radiant</a>
+            <a href="heating-furnaces.html">Gas Furnace Repairs</a>
+            <a href="cooling-heat-pumps.html">Inverter Heat Pumps</a>
+            <a href="services.html">All HVAC Services</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Service Areas</h4>
+          <div class="footer-links">
+            <a href="service-areas.html">Etobicoke (Headquarters Hub)</a>
+            <a href="service-areas.html">City of Toronto & Midtown</a>
+            <a href="service-areas.html">Mississauga & Peel Region</a>
+            <a href="service-areas.html">Brampton Corridor</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Etobicoke Hub</h4>
+          <div class="footer-contact-list">
+            <div class="contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>1460 The Queensway, Unit 103<br>Etobicoke, ON M8Z 1S7</span>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Phone / WhatsApp: <a href="tel:+14375999215" style="color: #ffffff; font-weight: 700;">(437) 599-9215</a></span>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Email: <a href="mailto:info@bycan.ca" style="color: #ffffff;">info@bycan.ca</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 ByCan HVAC Engineering. All rights reserved. TSSA Registered Contractor #007684321 • Licensed, Bonded & Insured.
+        </div>
+        <div style="display: flex; gap: var(--space-md);">
+          <a href="privacy-policy.html" style="color: #94a3b8; text-decoration: underline;">Privacy Policy</a>
+          <a href="terms-of-service.html" style="color: #94a3b8; text-decoration: underline;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Mobile Sticky Dock -->
+  <div class="mobile-action-dock">
+    <div class="dock-grid">
+      <a href="tel:+14375999215" class="dock-item dock-call">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Call (437) 599-9215</span>
+      </a>
+      <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="dock-item dock-whatsapp">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.524 1.961.815 2.796.815 3.183 0 5.768-2.587 5.769-5.767.001-3.181-2.585-5.767-5.769-5.767zm0-2.172c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8-1.42 0-2.75-.37-3.9-1.02l-4.131 1.082 1.101-4.022c-.73-1.22-1.17-2.63-1.17-4.14 0-4.418 3.582-8 8-8z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <a href="index.html#requestConsole" class="dock-item dock-quote">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m-6 9 2 2 4-4"/></svg>
+        <span>Request Service</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value;
+      alert(`Thank you, ${name}! Your request has been received by ByCan HVAC Engineering. Our team will contact you shortly.`);
+    });
+  </script>
+</body>
+</html>
