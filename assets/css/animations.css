@@ -380,6 +380,12 @@
     width: 38px;
     height: 38px;
   }
+
+  /* Prevent horizontal transform overflows on mobile */
+  .reveal-left,
+  .reveal-right {
+    transform: translateY(20px);
+  }
 }
 
 /* --- 9. Reduced Motion Accessibility Support --- */

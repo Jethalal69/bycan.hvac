@@ -194,19 +194,40 @@ document.addEventListener('DOMContentLoaded', () => {
   function openDrawer() {
     drawer?.classList.add('active');
     backdrop?.classList.add('active');
+    drawerToggle?.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    drawerClose?.focus();
   }
 
   function closeDrawer() {
     drawer?.classList.remove('active');
     backdrop?.classList.remove('active');
+    drawerToggle?.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
 
-  drawerToggle?.addEventListener('click', openDrawer);
-  drawerClose?.addEventListener('click', closeDrawer);
+  drawerToggle?.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (drawer?.classList.contains('active')) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  });
+
+  drawerClose?.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeDrawer();
+  });
+
   backdrop?.addEventListener('click', closeDrawer);
   drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer?.classList.contains('active')) {
+      closeDrawer();
+    }
+  });
 
   // --- 4. Interactive Service Discovery Tabs ---
   const discoveryTabs = document.querySelectorAll('.discovery-tab-btn');

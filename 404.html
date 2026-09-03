@@ -60,9 +60,45 @@
 
       <div class="header-actions">
         <a href="tel:+14375999215" class="btn btn-primary btn-sm">Call: (437) 599-9215</a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="brand-logo">
+          <div class="brand-icon">
+            <img src="assets/images/brand/bycan-logo.png" alt="ByCan HVAC Engineering Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">BYCAN</span>
+            <span class="brand-tagline">HVAC ENGINEERING</span>
+          </div>
+        </div>
+        <button id="drawerCloseBtn" class="drawer-close-btn" aria-label="Close navigation menu">✕</button>
+      </div>
+      <div class="drawer-links">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="services.html" class="drawer-link">All Services</a>
+        <a href="boilers-hydronics.html" class="drawer-link">Boilers & Hydronics</a>
+        <a href="heating-furnaces.html" class="drawer-link">Gas Furnaces</a>
+        <a href="cooling-heat-pumps.html" class="drawer-link">AC & Heat Pumps</a>
+        <a href="service-areas.html" class="drawer-link">Service Areas</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+      <a href="tel:+14375999215" class="btn btn-emergency" style="width: 100%;">Call: (437) 599-9215</a>
+      <a href="https://wa.me/14375999215" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">WhatsApp Direct</a>
+    </div>
+  </div>
 
   <!-- 404 Hero Section -->
   <section class="section section-dark tech-grid-bg" style="min-height: 70vh; display: flex; align-items: center;">
